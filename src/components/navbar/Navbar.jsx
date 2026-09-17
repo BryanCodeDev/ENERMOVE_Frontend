@@ -29,6 +29,13 @@ export default function Navbar() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  const darkHeaderRoutes = ['/', '/soluciones', '/catalogo', '/contacto'];
+  const isDarkHeader = !scrolled && !open && (darkHeaderRoutes.includes(pathname) || pathname.startsWith('/catalogo/'));
+  const headerTextClass = isDarkHeader ? 'text-white' : 'text-brand-charcoal';
+  const inactiveLinkClass = isDarkHeader
+    ? 'text-white/85 hover:text-white'
+    : 'text-brand-charcoal/80 hover:text-brand-blue';
+
   return (
     <motion.header
       style={{ y: navY }}
@@ -37,14 +44,14 @@ export default function Navbar() {
       <div className="mx-auto flex h-20 max-w-page items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link to="/" className="group inline-flex items-center gap-2.5" aria-label="ENERMOVE inicio">
           <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-blue to-brand-green font-display text-sm font-bold tracking-tight text-white shadow-lift transition-transform group-hover:scale-105">EM</span>
-          <span className={`font-display text-lg font-bold tracking-wide sm:text-xl ${scrolled || open ? 'text-brand-ink' : 'text-white'}`}>ENERMOVE</span>
+          <span className={`font-display text-lg font-bold tracking-wide sm:text-xl ${scrolled || open ? 'text-brand-ink' : headerTextClass}`}>ENERMOVE</span>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
           {links.map((link) => (
             <NavLink
               key={link.to}
-              className={({ isActive }) => `relative text-sm font-medium transition-colors ${isActive ? 'text-brand-blue' : scrolled || pathname === '/catalogo' || pathname.startsWith('/producto') || pathname.startsWith('/blog') ? 'text-brand-charcoal/80 hover:text-brand-blue' : 'text-white/85 hover:text-white'}`}
+              className={({ isActive }) => `relative text-sm font-medium transition-colors ${isActive ? 'text-brand-blue' : inactiveLinkClass}`}
               to={link.to}
             >
               {({ isActive }) => (
@@ -63,7 +70,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="grid h-11 w-11 place-items-center rounded-full border border-white/25 text-white transition-colors hover:bg-white/10 lg:hidden"
+          className={`grid h-11 w-11 place-items-center rounded-full border transition-colors lg:hidden ${isDarkHeader ? 'border-white/25 text-white hover:bg-white/10' : 'border-brand-line text-brand-ink hover:bg-brand-sand'}`}
           onClick={() => setOpen((current) => !current)}
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={open}
