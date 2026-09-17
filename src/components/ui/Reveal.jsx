@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 
 export default function Reveal({ children, className = '', delay = 0, as: Component = 'div', ...props }) {
   const reduceMotion = useReducedMotion();
-  const MotionComponent = motion(Component);
+  const MotionComponent = motion.create(Component);
   const animationProps = reduceMotion
     ? {}
     : {

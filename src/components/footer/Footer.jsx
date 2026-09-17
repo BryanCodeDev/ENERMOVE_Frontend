@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { contactConfig } from '../../config/contact';
 
@@ -19,6 +19,12 @@ const solutionLinks = [
   { label: 'Energía solar', to: '/soluciones#energia-solar' },
 ];
 
+const socialLinks = [
+  { label: 'Instagram', href: contactConfig.social.instagram, icon: Instagram },
+  { label: 'LinkedIn', href: contactConfig.social.linkedin, icon: Linkedin },
+  { label: 'Facebook', href: contactConfig.social.facebook, icon: Facebook },
+];
+
 const isPlaceholder = (value) => typeof value === 'string' && value.includes('REEMPLAZAR');
 
 export default function Footer() {
@@ -35,6 +41,17 @@ export default function Footer() {
             <div className="mt-7 flex flex-wrap gap-2">
               <span className="rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">Movilidad eléctrica</span>
               <span className="rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">Energía limpia</span>
+            </div>
+            <div className="mt-7 flex gap-3">
+              {socialLinks.map(({ label, href, icon: Icon }) => {
+                const placeholder = isPlaceholder(href);
+                const content = <Icon className="h-4 w-4" />;
+                return placeholder ? (
+                  <span key={label} className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/35" title={`${label} pendiente de configuración`}>{content}</span>
+                ) : (
+                  <a key={label} href={href} target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/75 transition-colors hover:border-brand-green hover:text-brand-green" aria-label={label}>{content}</a>
+                );
+              })}
             </div>
           </div>
 
