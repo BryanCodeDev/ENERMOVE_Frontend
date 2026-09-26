@@ -1,24 +1,35 @@
+import heroImg from '../assets/images/1.webp';
+import residentialImg from '../assets/images/2.webp';
+import businessImg from '../assets/images/3.webp';
+import solarImg from '../assets/images/4.webp';
+import chargerImg from '../assets/images/5.webp';
+import evImg from '../assets/images/6.webp';
+import technologyImg from '../assets/images/7.webp';
+import teamImg from '../assets/images/8.webp';
+import blogChargingImg from '../assets/images/9.webp';
+import blogSolarImg from '../assets/images/10.webp';
+
 export const images = {
-  hero: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=2200&q=85',
+  hero: heroImg,
   heroAlt: 'Vehículo eléctrico conectado a un cargador en un hogar moderno',
-  residential: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=85',
+  residential: residentialImg,
   residentialAlt: 'Casa moderna con espacios preparados para soluciones de energía',
-  business: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85',
+  business: businessImg,
   businessAlt: 'Espacio empresarial preparado para soluciones de movilidad eléctrica',
-  solar: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=85',
+  solar: solarImg,
   solarAlt: 'Paneles solares bajo luz natural',
-  charger: 'https://images.unsplash.com/photo-1617704548623-340376564e68?auto=format&fit=crop&w=1200&q=85',
+  charger: chargerImg,
   chargerAlt: 'Punto de carga para vehículo eléctrico',
-  ev: 'https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=1200&q=85',
+  ev: evImg,
   evAlt: 'Vehículo eléctrico en movimiento',
-  technology: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85',
+  technology: technologyImg,
   technologyAlt: 'Tecnología conectada para soluciones energéticas',
-  team: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=85',
+  team: teamImg,
   teamAlt: 'Equipo colaborando en una solución tecnológica',
-  blogCharging: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&w=1000&q=85',
-  blogSolar: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85',
-  blogGuide: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85',
-  productDefault: 'https://images.unsplash.com/photo-1617704548623-340376564e68?auto=format&fit=crop&w=1200&q=85',
+  blogCharging: blogChargingImg,
+  blogSolar: blogSolarImg,
+  blogGuide: blogChargingImg,
+  productDefault: chargerImg,
 };
 
 export default images;

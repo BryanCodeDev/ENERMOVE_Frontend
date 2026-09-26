@@ -2,6 +2,7 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import logo from '../assets/images/logo.webp';
 
 const links = [
   { label: 'Inicio', to: '/' },
@@ -43,7 +44,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-20 max-w-page items-center justify-between px-5 sm:px-8 lg:px-12">
         <Link to="/" className="group inline-flex items-center gap-2.5" aria-label="ENERMOVE inicio">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-blue to-brand-green font-display text-sm font-bold tracking-tight text-white shadow-lift transition-transform group-hover:scale-105">EM</span>
+          <img src={logo} alt="ENERMOVE logo" className="h-10 w-10 rounded-xl object-cover shadow-lift transition-transform group-hover:scale-105" />
           <span className={`font-display text-lg font-bold tracking-wide sm:text-xl ${scrolled || open ? 'text-brand-ink' : headerTextClass}`}>ENERMOVE</span>
         </Link>
 

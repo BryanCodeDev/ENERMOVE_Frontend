@@ -1,6 +1,7 @@
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { contactConfig } from '../../config/contact';
+import logo from '../assets/images/logo.webp';
 
 const navigation = [
   { label: 'Inicio', to: '/' },
@@ -33,10 +34,10 @@ export default function Footer() {
       <div className="mx-auto max-w-page px-5 py-16 sm:px-8 lg:px-12">
         <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.35fr_0.7fr_0.8fr_1fr] lg:gap-8">
           <div>
-            <Link to="/" className="inline-flex items-center gap-2" aria-label="ENERMOVE inicio">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-green font-display text-sm font-bold tracking-tight">EM</span>
-              <span className="font-display text-xl font-bold tracking-wide">ENERMOVE</span>
-            </Link>
+<Link to="/" className="inline-flex items-center gap-2" aria-label="ENERMOVE inicio">
+            <img src={logo} alt="ENERMOVE logo" className="h-10 w-10 rounded-xl object-cover" />
+            <span className="font-display text-xl font-bold tracking-wide">ENERMOVE</span>
+          </Link>
             <p className="mt-5 max-w-xs text-sm leading-7 text-white/65">{contactConfig.tagline || 'Energía que conecta tu hogar'}</p>
             <div className="mt-7 flex flex-wrap gap-2">
               <span className="rounded-full border border-white/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/70">Movilidad eléctrica</span>
