@@ -1,3 +1,5 @@
+import { BatteryCharging, Home, Leaf, Zap } from 'lucide-react';
+
 export const company = {
   name: 'ENERMOVE',
   tagline: 'Energía que conecta tu hogar',
@@ -27,21 +29,25 @@ export const company = {
     {
       number: '01',
       title: 'Movilidad eléctrica',
+      icon: Zap,
       description: 'Soluciones para cargar con mayor comodidad y confianza.',
     },
     {
       number: '02',
       title: 'Carga inteligente',
+      icon: Home,
       description: 'Tecnología pensada para aprovechar mejor cada conexión.',
     },
     {
       number: '03',
       title: 'Energía solar',
+      icon: Leaf,
       description: 'Una ruta hacia la generación limpia y el autoconsumo.',
     },
     {
       number: '04',
       title: 'Integración energética',
+      icon: BatteryCharging,
       description: 'Conectamos necesidades, equipos y objetivos en una misma visión.',
     },
   ],

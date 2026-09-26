@@ -18,7 +18,7 @@ export default function WhyEnermove() {
           <div>
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-green">Por qué ENERMOVE</p>
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">La energía también debe sentirse simple.</h2>
-            <p className="mt-6 max-w-md text-base leading-7 text-white/65">Unimos visión tecnológica, sostenibilidad y acompañamiento para hacer más clara la adopción de la movilidad eléctrica.</p>
+            <p className="mt-6 max-w-md text-base leading-7 text-white/65">Tecnología, sostenibilidad y acompañamiento para una adopción más clara.</p>
             <Link to="/nosotros" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-green">
               Conoce nuestra visión
               <ArrowRight className="h-4 w-4 transition-transform hover:translate-x-1" />
@@ -41,7 +41,7 @@ export default function WhyEnermove() {
                   <span className="font-display text-xs text-white/25">0{index + 1}</span>
                 </div>
                 <h3 className="mt-8 font-display text-xl font-semibold">{title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/60">{text}</p>
+                <span className="mt-4 block h-1 w-8 rounded-full bg-brand-green/70" />
               </motion.div>
             ))}
           </div>

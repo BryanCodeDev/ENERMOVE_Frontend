@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { images } from '../../data/images';
 
 const cases = [
-  { icon: Building2, title: 'Empresas', text: 'Experiencias de carga para colaboradores y visitantes.' },
-  { icon: MapPin, title: 'Parqueaderos', text: 'Infraestructura pensada para uso frecuente y crecimiento.' },
-  { icon: Trees, title: 'Conjuntos', text: 'Soluciones compartidas para nuevas comunidades.' },
+  { icon: Building2, title: 'Empresas' },
+  { icon: MapPin, title: 'Parqueaderos' },
+  { icon: Trees, title: 'Conjuntos' },
 ];
 
 export default function BusinessSection() {
@@ -19,11 +19,11 @@ export default function BusinessSection() {
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Infraestructura para la movilidad del futuro.</h2>
             <p className="mt-7 max-w-lg text-base leading-8 text-white/65">Analizamos el contexto de tu proyecto para proponer una solución de carga coherente con los usos, las personas y la proyección del espacio.</p>
             <div className="mt-9 grid gap-3 sm:grid-cols-3">
-              {cases.map(({ icon: Icon, title, text }) => (
+              {cases.map(({ icon: Icon, title }) => (
                 <div key={title} className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
                   <Icon className="h-5 w-5 text-brand-green" />
                   <p className="mt-4 font-display text-sm font-semibold">{title}</p>
-                  <p className="mt-2 text-xs leading-5 text-white/55">{text}</p>
+                  <span className="mt-4 block h-1 w-7 rounded-full bg-brand-green/70" />
                 </div>
               ))}
             </div>

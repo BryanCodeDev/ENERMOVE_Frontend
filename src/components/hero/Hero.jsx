@@ -51,17 +51,14 @@ export default function Hero() {
             Movilidad eléctrica y energía limpia para hogares y empresas.
           </motion.p>
           <motion.div
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-10"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.46, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link to="/soluciones" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-green px-7 py-4 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-green-700">
+            <Link to="/soluciones" className="inline-flex items-center gap-2 rounded-full bg-brand-green px-7 py-4 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-green-700">
               Conoce nuestras soluciones
               <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/contacto" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/35 px-7 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10">
-              Solicitar cotización
             </Link>
           </motion.div>
         </motion.div>

@@ -70,7 +70,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className={`grid h-11 w-11 place-items-center rounded-full border transition-colors lg:hidden ${isDarkHeader ? 'border-white/25 text-white hover:bg-white/10' : 'border-brand-line text-brand-ink hover:bg-brand-sand'}`}
+          className={`relative z-[60] shrink-0 grid h-11 w-11 place-items-center rounded-full border transition-colors lg:hidden ${isDarkHeader ? 'border-white/25 text-white hover:bg-white/10' : 'border-brand-line text-brand-ink hover:bg-brand-sand'}`}
           onClick={() => setOpen((current) => !current)}
           aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={open}

@@ -10,18 +10,18 @@ export default function AboutValues() {
           <Reveal>
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Nuestros valores</p>
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-brand-ink sm:text-5xl lg:text-6xl">La energía también se trata de confianza.</h2>
-            <p className="mt-7 max-w-xl text-base leading-8 text-brand-charcoal/65">Trabajamos con una lógica simple: escuchar primero, proponer con claridad y construir soluciones que acompañen la transición energética de forma responsable.</p>
+            <p className="mt-7 max-w-xl text-base leading-8 text-brand-charcoal/65">Escuchar primero. Proponer con claridad. Construir con responsabilidad.</p>
             <div className="mt-9 grid gap-4 sm:grid-cols-2">
               {[
-                [ShieldCheck, 'Innovación', 'Buscamos alternativas que simplifiquen la adopción tecnológica.'],
-                [Leaf, 'Sostenibilidad', 'Pensamos en el impacto de cada decisión energética.'],
-                [Sparkles, 'Eficiencia', 'Proponemos rutas prácticas y escalables.'],
-                [Check, 'Acompañamiento', 'Mantenemos una comunicación cercana y transparente.'],
-              ].map(([Icon, title, text]) => (
+                [ShieldCheck, 'Innovación'],
+                [Leaf, 'Sostenibilidad'],
+                [Sparkles, 'Eficiencia'],
+                [Check, 'Acompañamiento'],
+              ].map(([Icon, title]) => (
                 <div key={title} className="rounded-2xl border border-brand-line bg-brand-sand p-6">
                   <Icon className="h-5 w-5 text-brand-green" />
                   <h3 className="mt-5 font-display text-lg font-semibold">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-brand-charcoal/65">{text}</p>
+                  <span className="mt-4 block h-1 w-8 rounded-full bg-brand-green/70" />
                 </div>
               ))}
             </div>

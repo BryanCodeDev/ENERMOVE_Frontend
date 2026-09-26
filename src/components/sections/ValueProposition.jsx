@@ -11,7 +11,7 @@ export default function ValueProposition() {
           <motion.div initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Nuestra propuesta</p>
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">El futuro de la energía empieza en casa.</h2>
-            <p className="mt-7 max-w-lg text-base leading-8 text-brand-charcoal/65">EnerMove integra soluciones de movilidad eléctrica y energía limpia para ayudar a hogares y empresas a adoptar nuevas formas de consumir y utilizar la energía.</p>
+            <p className="mt-7 max-w-lg text-base leading-8 text-brand-charcoal/65">Movilidad eléctrica y energía limpia, integradas para hogares y empresas.</p>
             <Link to="/nosotros" className="mt-8 inline-flex items-center gap-2 rounded-full border border-brand-blue/25 px-5 py-3 text-sm font-semibold text-brand-blue transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">
               Conoce EnerMove
               <ArrowRight className="h-4 w-4" />
@@ -27,11 +27,14 @@ export default function ValueProposition() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="rounded-2xl border border-brand-line bg-brand-sand p-6 transition-all hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-soft"
+                  className="group relative overflow-hidden rounded-2xl border border-brand-line bg-brand-sand p-7 transition-all hover:-translate-y-1 hover:border-brand-blue/30 hover:shadow-soft"
                 >
-                  <span className="font-display text-xs font-semibold text-brand-green">{item.number}</span>
-                  <h3 className="mt-7 font-display text-xl font-semibold leading-snug">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-brand-charcoal/60">{item.description}</p>
+                  <span className="absolute right-5 top-5 font-display text-4xl font-bold text-brand-blue/10 transition-transform group-hover:scale-110 group-hover:text-brand-blue/20">{item.number}</span>
+                  <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand-green/15 text-brand-green transition-transform group-hover:scale-110 group-hover:rotate-3">
+                    <item.icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-10 font-display text-2xl font-semibold leading-tight">{item.title}</h3>
+                  <span className="mt-5 block h-1 w-10 rounded-full bg-brand-green/70" />
                 </motion.div>
               ))}
             </div>
