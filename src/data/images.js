@@ -1,4 +1,4 @@
-import heroImg from '../assets/images/1.webp';
+import heroImg from '../assets/images/5.webp';
 import residentialImg from '../assets/images/2.webp';
 import businessImg from '../assets/images/3.webp';
 import solarImg from '../assets/images/4.webp';
