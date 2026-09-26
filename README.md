@@ -43,7 +43,6 @@ src/
     buttons/
     forms/
     products/
-    blog/
     ui/
   pages/
   data/

@@ -11,7 +11,6 @@ import SolarSection from '../components/sections/SolarSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import ProcessSection from '../components/sections/ProcessSection';
 import WhyEnermove from '../components/sections/WhyEnermove';
-import BlogPreview from '../components/sections/BlogPreview';
 import ContactSection from '../components/sections/ContactSection';
 import CTASection from '../components/sections/CTASection';
 import { useSeo } from '../utils/seo';
@@ -34,7 +33,6 @@ export default function Home() {
       <ServicesSection />
       <ProcessSection />
       <WhyEnermove />
-      <BlogPreview />
       <ContactSection />
       <CTASection />
     </>

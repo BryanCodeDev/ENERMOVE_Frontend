@@ -9,7 +9,6 @@ const navigation = [
   { label: 'Soluciones', to: '/soluciones' },
   { label: 'Servicios', to: '/servicios' },
   { label: 'Catálogo', to: '/catalogo' },
-  { label: 'Blog', to: '/blog' },
   { label: 'Contacto', to: '/contacto' },
 ];
 

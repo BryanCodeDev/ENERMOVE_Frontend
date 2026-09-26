@@ -6,8 +6,6 @@ import Solutions from './pages/Solutions';
 import Services from './pages/Services';
 import Catalog from './pages/Catalog';
 import ProductDetail from './pages/ProductDetail';
-import Blog from './pages/Blog';
-import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import DataTreatment from './pages/DataTreatment';
@@ -24,8 +22,6 @@ export default function App() {
         <Route path="catalogo" element={<Catalog />} />
         <Route path="catalogo/:category" element={<Catalog />} />
         <Route path="producto/:slug" element={<ProductDetail />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="blog/:slug" element={<BlogDetail />} />
         <Route path="contacto" element={<Contact />} />
         <Route path="politica-de-privacidad" element={<PrivacyPolicy />} />
         <Route path="tratamiento-de-datos" element={<DataTreatment />} />

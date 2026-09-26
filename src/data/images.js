@@ -6,8 +6,6 @@ import chargerImg from '../assets/images/5.webp';
 import evImg from '../assets/images/6.webp';
 import technologyImg from '../assets/images/7.webp';
 import teamImg from '../assets/images/8.webp';
-import blogChargingImg from '../assets/images/9.webp';
-import blogSolarImg from '../assets/images/10.webp';
 
 export const images = {
   hero: heroImg,
@@ -26,9 +24,6 @@ export const images = {
   technologyAlt: 'Tecnología conectada para soluciones energéticas',
   team: teamImg,
   teamAlt: 'Equipo colaborando en una solución tecnológica',
-  blogCharging: blogChargingImg,
-  blogSolar: blogSolarImg,
-  blogGuide: blogChargingImg,
   productDefault: chargerImg,
 };
 
