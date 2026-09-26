@@ -2,7 +2,7 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import logo from '../assets/images/logo.webp';
+import logo from '../../assets/images/logo.webp';
 
 const links = [
   { label: 'Inicio', to: '/' },

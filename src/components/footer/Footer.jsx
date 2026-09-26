@@ -1,7 +1,7 @@
 import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { contactConfig } from '../../config/contact';
-import logo from '../assets/images/logo.webp';
+import logo from '../../assets/images/logo.webp';
 
 const navigation = [
   { label: 'Inicio', to: '/' },
