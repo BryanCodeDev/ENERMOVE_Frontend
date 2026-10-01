@@ -63,7 +63,9 @@ export default function ProductDetail() {
                 <Link to="/catalogo" className="inline-flex items-center justify-center rounded-full border border-brand-line px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">Volver al catálogo</Link>
               </div>
               <div className="mt-8 flex flex-wrap gap-2">
-                {['Sin precio publicado', 'Disponibilidad por confirmar', 'Datos técnicos pendientes'].map((item) => <span key={item} className="rounded-full bg-brand-blue/10 px-3 py-1.5 text-[11px] font-medium text-brand-blueDark">{item}</span>)}
+                {product.price ? <span className="rounded-full bg-brand-blue/10 px-3 py-1.5 text-[11px] font-medium text-brand-blueDark">{product.price}</span> : <span className="rounded-full bg-brand-blue/10 px-3 py-1.5 text-[11px] font-medium text-brand-blueDark">Cotizar precio</span>}
+                <span className="rounded-full bg-brand-blue/10 px-3 py-1.5 text-[11px] font-medium text-brand-blueDark">Disponibilidad según stock</span>
+                <span className="rounded-full bg-brand-blue/10 px-3 py-1.5 text-[11px] font-medium text-brand-blueDark">Instalación certificada RETIE</span>
               </div>
             </Reveal>
           </div>

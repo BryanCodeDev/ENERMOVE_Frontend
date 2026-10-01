@@ -36,7 +36,7 @@ export default function ContactInfo() {
           <Reveal delay={0.12} className="rounded-2xl border border-white/10 bg-white p-8 text-brand-ink shadow-soft sm:p-10">
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Solicita una cotización</p>
             <h3 className="mt-4 font-display text-3xl font-semibold leading-tight">Cuéntanos sobre tu necesidad.</h3>
-            <p className="mt-5 text-sm leading-7 text-brand-charcoal/65">Este formulario frontend muestra una confirmación visual y está listo para conectar con un servicio backend en una siguiente etapa.</p>
+            <p className="mt-5 text-sm leading-7 text-brand-charcoal/65">Recibimos tu solicitud, analizamos tu proyecto y te respondemos por WhatsApp o correo en menos de 24 horas.</p>
             <ul className="mt-8 space-y-4">
               {['Diagnóstico inicial', 'Propuesta coherente', 'Acompañamiento cercano'].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-sm font-medium text-brand-charcoal/80"><Check className="h-4 w-4 text-brand-blue" />{item}</li>

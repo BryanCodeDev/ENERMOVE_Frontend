@@ -9,6 +9,7 @@ import ProductDetail from './pages/ProductDetail';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import DataTreatment from './pages/DataTreatment';
+import Compatibilidad from './pages/Compatibilidad';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="catalogo/:category" element={<Catalog />} />
         <Route path="producto/:slug" element={<ProductDetail />} />
         <Route path="contacto" element={<Contact />} />
+        <Route path="compatibilidad" element={<Compatibilidad />} />
         <Route path="politica-de-privacidad" element={<PrivacyPolicy />} />
         <Route path="tratamiento-de-datos" element={<DataTreatment />} />
         <Route path="*" element={<NotFound />} />

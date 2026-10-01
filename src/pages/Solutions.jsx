@@ -5,17 +5,13 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Reveal from '../components/ui/Reveal';
 import SectionHeading from '../components/ui/SectionHeading';
 import SolutionCard from '../components/cards/SolutionCard';
-import ResidentialSection from '../components/sections/ResidentialSection';
-import BusinessSection from '../components/sections/BusinessSection';
-import SolarSection from '../components/sections/SolarSection';
-import CTASection from '../components/sections/CTASection';
 import JsonLd from '../components/ui/JsonLd';
 import { useSeo, solutionSchema, breadcrumbSchema } from '../utils/seo';
 
 export default function Solutions() {
   useSeo({
-    title: 'Soluciones | ENERMOVE',
-    description: 'Conoce las soluciones de ENERMOVE en carga residencial, carga empresarial, infraestructura EV y energía solar.',
+    title: 'Soluciones de carga EV y energía solar | ENERMOVE',
+    description: 'Conoce nuestras soluciones en carga residencial, empresarial, infraestructura EV y energía solar para hogares y empresas en Colombia.',
     canonical: 'https://enermove.example/soluciones',
   });
 
@@ -35,8 +31,8 @@ export default function Solutions() {
           <div className="mt-12 grid items-end justify-between gap-10 lg:grid-cols-[1fr_0.65fr]">
             <Reveal>
               <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Soluciones</p>
-              <h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Soluciones para cada necesidad.</h1>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-white/65">Conectamos movilidad eléctrica, carga inteligente y energía limpia en propuestas pensadas para hogares, empresas y proyectos de infraestructura.</p>
+              <h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Soluciones de carga EV y energía solar para cada necesidad.</h1>
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/65">Conectamos movilidad eléctrica, carga inteligente y energía limpia en propuestas pensadas para hogares, empresas y proyectos de infraestructura en Colombia.</p>
             </Reveal>
             <Reveal delay={0.12} className="rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur-md">
               <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-brand-blue">Enfoque integral</p>
@@ -55,10 +51,6 @@ export default function Solutions() {
           </div>
         </div>
       </section>
-      <ResidentialSection />
-      <BusinessSection />
-      <SolarSection />
-      <CTASection />
     </>
   );
 }

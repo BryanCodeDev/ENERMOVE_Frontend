@@ -3,7 +3,6 @@ import { contactConfig } from '../config/contact';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Reveal from '../components/ui/Reveal';
 import ContactSection from '../components/sections/ContactSection';
-import CTASection from '../components/sections/CTASection';
 import JsonLd from '../components/ui/JsonLd';
 import { useSeo, breadcrumbSchema, faqSchema } from '../utils/seo';
 
@@ -28,8 +27,8 @@ const faqs = [
 
 export default function Contact() {
   useSeo({
-    title: 'Contacto | ENERMOVE',
-    description: 'Contacta a ENERMOVE para conocer soluciones de movilidad eléctrica, carga EV y energía limpia.',
+    title: 'Cotiza tu cargador de carro eléctrico | ENERMOVE',
+    description: 'Cuéntanos tu proyecto y te respondemos por WhatsApp, correo o teléfono. Instalación certificada RETIE en Bogotá y Colombia.',
     canonical: 'https://enermove.example/contacto',
   });
 
@@ -49,14 +48,13 @@ export default function Contact() {
           <div className="mt-12 max-w-4xl">
             <Reveal>
               <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Contacto</p>
-              <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Conversemos sobre tu proyecto.</h1>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-white/65">Cuéntanos qué necesitas y construyamos una ruta clara para incorporar soluciones de movilidad eléctrica y energía limpia.</p>
+              <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Cotiza tu cargador para carro eléctrico.</h1>
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/65">Cuéntanos qué necesitas y construyamos una ruta clara para incorporar soluciones de movilidad eléctrica y energía limpia en Colombia.</p>
             </Reveal>
           </div>
         </div>
       </section>
       <ContactSection />
-      <CTASection />
     </>
   );
 }

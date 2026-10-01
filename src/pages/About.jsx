@@ -10,7 +10,6 @@ import JsonLd from '../components/ui/JsonLd';
 import { organizationSchema, useSeo } from '../utils/seo';
 import AboutValues from '../components/sections/AboutValues';
 import ProcessSection from '../components/sections/ProcessSection';
-import CTASection from '../components/sections/CTASection';
 
 const pillars = [
   [Compass, 'Innovación', 'Exploramos tecnologías que hacen más simple adoptar la movilidad eléctrica.'],
@@ -21,8 +20,8 @@ const pillars = [
 
 export default function About() {
   useSeo({
-    title: 'Nosotros | ENERMOVE',
-    description: 'Conoce a ENERMOVE, empresa colombiana orientada a la transición energética y la movilidad eléctrica.',
+    title: 'Empresa de cargadores EV y energía solar en Colombia | ENERMOVE',
+    description: 'ENERMOVE S.A.S., empresa colombiana con sede en Bogotá. Ingeniería, importación, instalación y consultoría en movilidad eléctrica e integración solar. Fundador: Ing. Mecánico, Especialista PMI, 15+ años en sector energético.',
     canonical: 'https://enermove.example/nosotros',
   });
 
@@ -35,8 +34,9 @@ export default function About() {
           <div className="mt-12 grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <Reveal>
               <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Nosotros</p>
-              <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight text-brand-ink sm:text-6xl lg:text-7xl">Estamos construyendo una nueva forma de movernos.</h1>
+              <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight text-brand-ink sm:text-6xl lg:text-7xl">ENERMOVE: ingeniería colombiana para la movilidad eléctrica.</h1>
               <p className="mt-7 max-w-xl text-base leading-8 text-brand-charcoal/65">{company.description}</p>
+              <p className="mt-5 max-w-xl text-base leading-8 text-brand-charcoal/65">Fundada por ingeniero mecánico con especialización PMI y 15+ años en energía. Sede en Bogotá, cobertura nacional mediante red de instaladores certificados RETIE.</p>
               <div className="mt-9 flex flex-wrap gap-3">
                 {['Innovación', 'Tecnología', 'Eficiencia', 'Sostenibilidad', 'Acompañamiento'].map((item) => <span key={item} className="rounded-full bg-white px-4 py-2 text-xs font-medium text-brand-charcoal/70 shadow-soft">{item}</span>)}
               </div>
@@ -61,7 +61,7 @@ export default function About() {
       <AboutValues />
       <section className="bg-brand-sand px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-page">
-          <SectionHeading align="center" eyebrow="Nuestra brújula" title="Misión, visión y propósito." description="Textos corporativos pendientes de definición oficial. Mantendremos estos espacios claramente identificados hasta contar con la versión aprobada." />
+          <SectionHeading align="center" eyebrow="Nuestra brújula" title="Misión, visión y propósito." description="Los pilares que guían cada decisión y proyecto en ENERMOVE." />
           <div className="mt-14 grid gap-5 lg:grid-cols-3">
             {[
               ['Misión', company.mission, Compass],
@@ -79,7 +79,6 @@ export default function About() {
         </div>
       </section>
       <ProcessSection />
-      <CTASection />
     </>
   );
 }

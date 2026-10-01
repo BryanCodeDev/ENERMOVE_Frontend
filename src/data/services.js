@@ -3,45 +3,45 @@ import { BarChart3, Boxes, ClipboardCheck, Compass, HeartHandshake, Lightbulb, P
 export const services = [
   {
     slug: 'asesoria',
-    title: 'Asesoría',
-    description: '[REEMPLAZAR CON DESCRIPCIÓN OFICIAL] Orientamos la toma de decisiones con información clara y útil.',
+    title: 'Asesoría especializada',
+    description: 'Diagnóstico de necesidades energéticas y de movilidad. Analizamos tu consumo, tipo de vehículo, espacio disponible y objetivos para recomendar la solución óptima de carga EV e integración solar.',
     icon: Compass,
-    tags: ['Diagnóstico', 'Claridad'],
+    tags: ['Diagnóstico', 'Viabilidad', 'Recomendación técnica'],
   },
   {
     slug: 'seleccion-equipos',
     title: 'Selección de equipos',
-    description: '[REEMPLAZAR CON DESCRIPCIÓN OFICIAL] Comparamos alternativas según el contexto de cada proyecto.',
+    description: 'Comparativa de fabricantes y modelos (Haceb, Wallbox, ABB, Schneider, Moreday) según conector, potencia, certificaciones y presupuesto. Entregamos ficha técnica comparativa por proyecto.',
     icon: Boxes,
-    tags: ['Referencias', 'Compatibilidad'],
+    tags: ['Multi-marca', 'Comparativa', 'Ficha técnica'],
   },
   {
     slug: 'diseno-soluciones',
     title: 'Diseño de soluciones',
-    description: '[REEMPLAZAR CON DESCRIPCIÓN OFICIAL] Definimos una ruta coherente entre necesidad, espacio y tecnología.',
+    description: 'Ingeniería de detalle: planos unifilares, cálculo de protecciones, dimensionamiento de cableado, coordinación con red eléctrica y diseño de integración con paneles solares existentes o nuevos.',
     icon: Lightbulb,
-    tags: ['Proyecto', 'Escalabilidad'],
+    tags: ['Planos unifilares', 'Cálculos', 'Integración solar'],
   },
   {
     slug: 'instalacion',
-    title: 'Instalación',
-    description: '[REEMPLAZAR CON ALCANCE OFICIAL] Servicio sujeto a confirmación y condiciones del proyecto.',
+    title: 'Instalación certificada',
+    description: 'Instalación eléctrica por personal certificado RETIE. Incluye puesta en marcha, pruebas de aislamiento, verificación de protecciones y entrega de acta de recepción. Cobertura nacional mediante red de instaladores aliados.',
     icon: PlugZap,
-    tags: ['Por confirmar', 'Seguridad'],
+    tags: ['RETIE', 'Puesta en marcha', 'Cobertura nacional'],
   },
   {
     slug: 'mantenimiento',
-    title: 'Mantenimiento',
-    description: '[REEMPLAZAR CON ALCANCE OFICIAL] Acompañamiento posterior sujeto a disponibilidad y cobertura.',
+    title: 'Mantenimiento y soporte',
+    description: 'Planes de mantenimiento preventivo y correctivo: limpieza, verificación de torque, actualización firmware, pruebas de comunicación OCPP y gestión de garantías con fabricantes. SLA según criticidad.',
     icon: Wrench,
-    tags: ['Seguimiento', 'Confianza'],
+    tags: ['Preventivo', 'Correctivo', 'Garantías', 'SLA'],
   },
   {
     slug: 'integracion-energetica',
-    title: 'Integración energética',
-    description: '[REEMPLAZAR CON DESCRIPCIÓN OFICIAL] Conectamos carga, energía solar y objetivos de sostenibilidad.',
+    title: 'Integración energética solar + EV',
+    description: 'Diseño e implementación de sistemas fotovoltaicos conectados a cargadores EV con gestión inteligente de excedentes (PV excedente → carga EV). Monitoreo unificado y optimización de autoconsumo.',
     icon: Sun,
-    tags: ['Visión integral', 'Energía limpia'],
+    tags: ['Fotovoltaico', 'Gestión excedentes', 'Autoconsumo', 'Monitoreo unificado'],
   },
 ];
 
@@ -55,7 +55,7 @@ export const processSteps = [
   {
     number: '02',
     title: 'Analizamos tu proyecto',
-    description: 'Revisamos condiciones, restricciones y oportunidades de implementación.',
+    description: 'Revisamos condiciones eléctricas, restricciones y oportunidades de implementación.',
     icon: BarChart3,
   },
   {
@@ -73,7 +73,7 @@ export const processSteps = [
   {
     number: '05',
     title: 'Acompañamos la implementación',
-    description: 'Mantenemos una comunicación cercana durante la ejecución del proyecto.',
+    description: 'Mantenemos comunicación cercana durante la ejecución y puesta en marcha.',
     icon: ShieldCheck,
   },
 ];

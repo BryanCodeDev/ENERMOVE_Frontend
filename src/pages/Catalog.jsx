@@ -52,7 +52,7 @@ export default function Catalog() {
       <section className="bg-white px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-page">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionHeading eyebrow="Referencias" title="Explora por categoría." description="Información de demostración para futura conexión con un catálogo administrable." />
+            <SectionHeading eyebrow="Referencias" title="Explora por categoría." description="Selecciona una línea de producto para ver referencias, especificaciones y cotizar." />
             <div className="flex flex-wrap gap-2">
               {productCategories.map((item) => (
                 <Link key={item.slug} to={`/catalogo/${item.slug}`} className={`rounded-full px-4 py-2.5 text-xs font-semibold transition-colors ${activeCategory?.slug === item.slug ? 'bg-brand-blue text-white' : 'bg-brand-sand text-brand-charcoal/70 hover:bg-brand-blue/10 hover:text-brand-blue'}`}>{item.label}</Link>

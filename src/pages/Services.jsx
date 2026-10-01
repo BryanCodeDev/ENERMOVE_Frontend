@@ -6,7 +6,6 @@ import SectionHeading from '../components/ui/SectionHeading';
 import ServicesSection from '../components/sections/ServicesSection';
 import ProcessSection from '../components/sections/ProcessSection';
 import ContactInfo from '../components/sections/ContactInfo';
-import CTASection from '../components/sections/CTASection';
 import JsonLd from '../components/ui/JsonLd';
 import { useSeo, serviceSchema, breadcrumbSchema } from '../utils/seo';
 
@@ -19,8 +18,8 @@ const services = [
 
 export default function Services() {
   useSeo({
-    title: 'Servicios | ENERMOVE',
-    description: 'Acompañamiento de ENERMOVE para asesoría, selección de equipos, diseño de soluciones e integración energética.',
+    title: 'Instalación de cargadores y energía solar | ENERMOVE',
+    description: 'Asesoría, selección de equipos, diseño e integración de carga EV con paneles solares. Instalación certificada RETIE en Colombia.',
     canonical: 'https://enermove.example/servicios',
   });
 
@@ -40,13 +39,13 @@ export default function Services() {
           <div className="mt-12 grid items-end justify-between gap-10 lg:grid-cols-[1fr_0.6fr]">
             <Reveal>
               <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Servicios</p>
-              <h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-tight text-brand-ink sm:text-6xl lg:text-7xl">Nuestro acompañamiento.</h1>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-brand-charcoal/65">Una ruta de trabajo provisional para entender tu necesidad, comparar alternativas y diseñar una solución coherente con tu proyecto.</p>
+              <h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-tight text-brand-ink sm:text-6xl lg:text-7xl">Instalación de cargadores EV, energía solar y integración energética.</h1>
+              <p className="mt-7 max-w-2xl text-base leading-8 text-brand-charcoal/65">Diseñamos una ruta clara: diagnosticamos tu necesidad, comparamos alternativas técnicas y definimos la solución óptima para tu proyecto de carga EV e integración solar.</p>
             </Reveal>
             <Reveal delay={0.12} className="rounded-2xl border border-brand-line bg-white p-7 shadow-soft">
               <CheckCircle2 className="h-7 w-7 text-brand-blue" />
               <p className="mt-5 font-display text-xl font-semibold">Claridad antes que complejidad.</p>
-              <p className="mt-3 text-sm leading-6 text-brand-charcoal/65">Cada servicio está sujeto a confirmación oficial y a las condiciones del proyecto.</p>
+              <p className="mt-3 text-sm leading-6 text-brand-charcoal/65">Alcance, tiempos y condiciones se definen en propuesta formal tras diagnóstico inicial.</p>
             </Reveal>
           </div>
         </div>
@@ -54,7 +53,6 @@ export default function Services() {
       <ServicesSection />
       <ProcessSection />
       <ContactInfo />
-      <CTASection />
     </>
   );
 }

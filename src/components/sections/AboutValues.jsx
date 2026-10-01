@@ -1,6 +1,7 @@
 import { ArrowRight, Check, Leaf, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Reveal from '../ui/Reveal';
+import { company } from '../../data/company';
 
 export default function AboutValues() {
   return (
@@ -29,8 +30,8 @@ export default function AboutValues() {
           <Reveal delay={0.12} className="relative min-h-[420px] overflow-hidden rounded-[2rem] bg-brand-ink p-8 text-white sm:p-10">
             <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-blue/20 blur-3xl" />
             <p className="relative font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Propósito</p>
-            <blockquote className="relative mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl">[REEMPLAZAR CON PROPÓSITO OFICIAL]</blockquote>
-            <p className="relative mt-7 text-sm leading-7 text-white/60">Este texto es un placeholder hasta contar con la definición corporativa oficial.</p>
+            <blockquote className="relative mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl">{company.purpose}</blockquote>
+            <p className="relative mt-7 text-sm leading-7 text-white/60">Conectamos la movilidad del futuro con la energía del presente.</p>
             <Link to="/contacto" className="relative mt-10 inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-sm font-semibold transition-all hover:border-brand-blue hover:bg-brand-blue">
               Hablemos
               <ArrowRight className="h-4 w-4" />
