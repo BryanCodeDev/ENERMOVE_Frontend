@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
             <h1 className="mt-5 font-display text-5xl font-bold leading-tight text-brand-ink sm:text-6xl">Política de privacidad</h1>
             <p className="mt-7 text-base leading-8 text-brand-charcoal/65">[REEMPLAZAR CON POLÍTICA DE PRIVACIDAD OFICIAL]</p>
             <div className="mt-10 rounded-2xl border border-brand-line bg-white p-8">
-              <ShieldCheck className="h-7 w-7 text-brand-green" />
+              <ShieldCheck className="h-7 w-7 text-brand-blue" />
               <h2 className="mt-5 font-display text-2xl font-semibold">Datos pendientes de definición</h2>
               <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Este documento debe ser revisado y aprobado antes de publicar información definitiva sobre el tratamiento de datos.</p>
               <Link to="/" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Volver al inicio</Link>

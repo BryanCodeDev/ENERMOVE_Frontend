@@ -29,9 +29,9 @@ const isPlaceholder = (value) => typeof value === 'string' && value.includes('RE
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-ink text-white">
-      <div className="mx-auto max-w-page px-5 py-16 sm:px-8 lg:px-12">
-        <div className="grid gap-12 border-b border-white/10 pb-14 lg:grid-cols-[1.35fr_0.7fr_0.8fr_1fr] lg:gap-8">
+    <footer className="page-footer bg-brand-ink text-white">
+      <div className="mx-auto max-w-page py-12 sm:py-16">
+        <div className="grid gap-10 border-b border-white/10 pb-10 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.7fr_0.8fr_1fr] lg:gap-8 lg:pb-14">
           <div>
 <Link to="/" className="inline-flex items-center gap-2" aria-label="ENERMOVE inicio">
             <img src={logo} alt="ENERMOVE logo" className="h-10 w-10 rounded-xl object-cover" />
@@ -49,7 +49,7 @@ export default function Footer() {
                 return placeholder ? (
                   <span key={label} className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/35" title={`${label} pendiente de configuración`}>{content}</span>
                 ) : (
-                  <a key={label} href={href} target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/75 transition-colors hover:border-brand-green hover:text-brand-green" aria-label={label}>{content}</a>
+                  <a key={label} href={href} target="_blank" rel="noreferrer" className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/75 transition-colors hover:border-brand-blue hover:text-brand-blue" aria-label={label}>{content}</a>
                 );
               })}
             </div>
@@ -87,19 +87,19 @@ export default function Footer() {
             <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-white/45">Contacto</p>
             <ul className="mt-6 space-y-4 text-sm text-white/75">
               <li className="flex gap-3">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                 <a className="break-words hover:text-white" href={`mailto:${contactConfig.email}`}>{contactConfig.email}</a>
               </li>
               <li className="flex gap-3">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                 <a className="hover:text-white" href={`tel:${contactConfig.phone}`}>{contactConfig.phone}</a>
               </li>
               <li className="flex gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                 <span>{contactConfig.city} {contactConfig.address && `· ${contactConfig.address}`}</span>
               </li>
               <li className="flex gap-3">
-                <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-green" />
+                <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
                 <span>WhatsApp disponible próximamente</span>
               </li>
             </ul>

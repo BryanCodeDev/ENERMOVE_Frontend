@@ -12,7 +12,7 @@ export default function ProductGallery({ images: gallery, alt }) {
   return (
     <Reveal>
       <div className="overflow-hidden rounded-2xl bg-brand-line">
-        <div className="relative aspect-[4/3] overflow-hidden bg-brand-line sm:aspect-[16/10]">
+        <div className="media-frame media-frame--wide relative overflow-hidden bg-brand-line">
           <img src={gallery[active]} alt={`${alt} ${active + 1}`} className="h-full w-full object-cover transition-opacity duration-500" />
           <button type="button" onClick={() => move(-1)} aria-label="Imagen anterior" className="absolute left-4 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-brand-ink shadow-soft transition-transform hover:scale-105"><ChevronLeft className="h-5 w-5" /></button>
           <button type="button" onClick={() => move(1)} aria-label="Imagen siguiente" className="absolute right-4 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-brand-ink shadow-soft transition-transform hover:scale-105"><ChevronRight className="h-5 w-5" /></button>

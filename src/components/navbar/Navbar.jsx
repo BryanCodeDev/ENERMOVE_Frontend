@@ -41,13 +41,13 @@ export default function Navbar() {
       style={{ y: navY }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-soft backdrop-blur-xl' : 'bg-transparent'}`}
     >
-      <div className="mx-auto flex h-20 max-w-page items-center justify-between px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-16 max-w-page items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-12">
         <Link to="/" className="group inline-flex items-center gap-2.5" aria-label="ENERMOVE inicio">
-          <img src={logo} alt="ENERMOVE logo" className="h-10 w-10 rounded-xl object-cover shadow-lift transition-transform group-hover:scale-105" />
-          <span className={`font-display text-lg font-bold tracking-wide sm:text-xl ${scrolled || open ? 'text-brand-ink' : headerTextClass}`}>ENERMOVE</span>
+          <img src={logo} alt="ENERMOVE logo" className="h-9 w-9 rounded-xl object-cover shadow-lift transition-transform group-hover:scale-105 sm:h-10 sm:w-10" />
+          <span className={`font-display text-base font-bold tracking-wide sm:text-lg sm:text-xl ${scrolled || open ? 'text-brand-ink' : headerTextClass}`}>ENERMOVE</span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label="Navegación principal">
           {links.map((link) => (
             <NavLink
               key={link.to}
@@ -57,12 +57,12 @@ export default function Navbar() {
               {({ isActive }) => (
                 <>
                   <span>{link.label}</span>
-                  <span className={`absolute -bottom-2 left-0 h-0.5 rounded-full bg-brand-green transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                  <span className={`absolute -bottom-2 left-0 h-0.5 rounded-full bg-brand-blue transition-all duration-300 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                 </>
               )}
             </NavLink>
           ))}
-          <Link to="/contacto" className="ml-2 inline-flex items-center gap-2 rounded-full bg-brand-blue px-5 py-2.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark">
+          <Link to="/contacto" className="ml-1 inline-flex items-center gap-2 rounded-full bg-brand-blue px-4 py-2.5 text-xs font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:px-5 sm:text-sm">
             Solicitar cotización
             <ArrowRight className="h-4 w-4" />
           </Link>
@@ -94,7 +94,7 @@ export default function Navbar() {
                 to={link.to}
               >
                 <span>{link.label}</span>
-                <span className="font-display text-xs text-brand-green/70">0{index + 1}</span>
+                <span className="font-display text-xs text-brand-blue/70">0{index + 1}</span>
               </NavLink>
             ))}
           </div>

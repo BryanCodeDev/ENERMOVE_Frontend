@@ -42,17 +42,17 @@ export default function About() {
               </div>
             </Reveal>
             <Reveal delay={0.12} className="relative">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-line">
+              <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">
                 <img src={images.team} alt={images.teamAlt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/55 via-transparent to-transparent" />
-                <div className="absolute bottom-7 left-7 right-7 text-white">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-green">Empresa colombiana</p>
-                  <p className="mt-2 font-display text-2xl font-semibold">Transición energética con visión humana</p>
+                <div className="absolute bottom-4 left-4 right-4 text-white sm:bottom-7 sm:left-7 sm:right-7">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-blue sm:text-xs">Empresa colombiana</p>
+                  <p className="mt-2 font-display text-lg font-semibold leading-tight sm:text-2xl">Transición energética con visión humana</p>
                 </div>
               </div>
-              <div className="absolute -left-4 -bottom-6 rounded-2xl bg-white p-5 shadow-soft sm:-left-8">
-                <p className="font-display text-3xl font-bold text-brand-blue">EM</p>
-                <p className="mt-1 text-xs leading-5 text-brand-charcoal/60">Energía que conecta tu hogar</p>
+              <div className="absolute -bottom-5 left-2 max-w-[72%] rounded-2xl bg-white p-4 shadow-soft sm:-bottom-6 sm:left-2 sm:max-w-none sm:-left-8 sm:p-5">
+                <p className="font-display text-2xl font-bold text-brand-blue sm:text-3xl">EM</p>
+                <p className="mt-1 text-[11px] leading-5 text-brand-charcoal/60 sm:text-xs">Energía que conecta tu hogar</p>
               </div>
             </Reveal>
           </div>
@@ -69,7 +69,7 @@ export default function About() {
               ['Propósito', company.purpose, HeartHandshake],
             ].map(([title, text, Icon], index) => (
               <Reveal key={title} delay={index * 0.08} className="rounded-2xl border border-brand-line bg-white p-8">
-                <Icon className="h-6 w-6 text-brand-green" />
+                <Icon className="h-6 w-6 text-brand-blue" />
                 <p className="mt-8 font-display text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue">0{index + 1}</p>
                 <h3 className="mt-3 font-display text-2xl font-semibold">{title}</h3>
                 <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">{text}</p>

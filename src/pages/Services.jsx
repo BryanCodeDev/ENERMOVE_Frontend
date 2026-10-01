@@ -28,7 +28,7 @@ export default function Services() {
               <p className="mt-7 max-w-2xl text-base leading-8 text-brand-charcoal/65">Una ruta de trabajo provisional para entender tu necesidad, comparar alternativas y diseñar una solución coherente con tu proyecto.</p>
             </Reveal>
             <Reveal delay={0.12} className="rounded-2xl border border-brand-line bg-white p-7 shadow-soft">
-              <CheckCircle2 className="h-7 w-7 text-brand-green" />
+              <CheckCircle2 className="h-7 w-7 text-brand-blue" />
               <p className="mt-5 font-display text-xl font-semibold">Claridad antes que complejidad.</p>
               <p className="mt-3 text-sm leading-6 text-brand-charcoal/65">Cada servicio está sujeto a confirmación oficial y a las condiciones del proyecto.</p>
             </Reveal>

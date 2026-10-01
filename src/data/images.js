@@ -13,7 +13,6 @@ export const images = {
   residential: residentialImg,
   residentialAlt: 'Casa moderna con espacios preparados para soluciones de energía',
   business: businessImg,
-  businessAlt: 'Espacio empresarial preparado para soluciones de movilidad eléctrica',
   solar: solarImg,
   solarAlt: 'Paneles solares bajo luz natural',
   charger: chargerImg,

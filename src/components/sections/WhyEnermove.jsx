@@ -1,13 +1,12 @@
-import { ArrowRight, Check, Home, Leaf, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, Home, Leaf, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { company } from '../../data/company';
 
 const items = [
-  { icon: ShieldCheck, title: 'Tecnología', text: 'Soluciones seleccionadas con criterio y visión de futuro.' },
-  { icon: Sparkles, title: 'Acompañamiento', text: 'Claridad y cercanía en cada decisión del proyecto.' },
-  { icon: Home, title: 'Soluciones personalizadas', text: 'Propuestas coherentes con el espacio y la necesidad real.' },
-  { icon: Leaf, title: 'Energía limpia', text: 'Una ruta más sostenible para hogares y empresas.' },
+  { icon: ShieldCheck, title: 'Tecnología' },
+  { icon: Sparkles, title: 'Acompañamiento' },
+  { icon: Home, title: 'Soluciones personalizadas' },
+  { icon: Leaf, title: 'Energía limpia' },
 ];
 
 export default function WhyEnermove() {
@@ -16,50 +15,30 @@ export default function WhyEnermove() {
       <div className="mx-auto max-w-page">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-green">Por qué ENERMOVE</p>
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Por qué ENERMOVE</p>
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">La energía también debe sentirse simple.</h2>
-            <p className="mt-6 max-w-md text-base leading-7 text-white/65">Tecnología, sostenibilidad y acompañamiento para una adopción más clara.</p>
-            <Link to="/nosotros" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-green">
+            <Link to="/nosotros" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-blue">
               Conoce nuestra visión
               <ArrowRight className="h-4 w-4 transition-transform hover:translate-x-1" />
             </Link>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {items.map(({ icon: Icon, title, text }, index) => (
+            {items.map(({ icon: Icon, title }, index) => (
               <motion.div
                 key={title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.55, delay: index * 0.08 }}
-                className="group rounded-2xl border border-white/10 bg-white/[0.04] p-7 transition-colors hover:border-brand-green/50 hover:bg-white/[0.07]"
+                className="group flex items-center gap-3.5 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-5 transition-colors hover:border-brand-blue/50 hover:bg-white/[0.07] sm:gap-4 sm:px-6 sm:py-7"
               >
-                <div className="flex items-start justify-between">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-green/15 text-brand-green transition-transform group-hover:scale-110 group-hover:rotate-3">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <span className="font-display text-xs text-white/25">0{index + 1}</span>
-                </div>
-                <h3 className="mt-8 font-display text-xl font-semibold">{title}</h3>
-                <span className="mt-4 block h-1 w-8 rounded-full bg-brand-green/70" />
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-brand-blue/15 text-brand-blue transition-transform group-hover:scale-110 group-hover:rotate-3 sm:h-11 sm:w-11">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <h3 className="font-display text-base font-semibold leading-snug sm:text-lg">{title}</h3>
               </motion.div>
             ))}
           </div>
-        </div>
-        <div className="mt-14 grid gap-4 border-t border-white/10 pt-10 sm:grid-cols-3">
-          {[
-            ['Colombia', 'Raíz local'],
-            ['Energía', 'Visión limpia'],
-            ['Futuro', 'Conectado'],
-          ].map(([title, text]) => (
-            <div key={title} className="flex items-center gap-4">
-              <Check className="h-5 w-5 shrink-0 text-brand-green" />
-              <div>
-                <p className="font-display font-semibold">{title}</p>
-                <p className="text-xs text-white/50">{text}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

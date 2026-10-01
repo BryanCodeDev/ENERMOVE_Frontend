@@ -16,7 +16,7 @@ export default function DataTreatment() {
             <h1 className="mt-5 font-display text-5xl font-bold leading-tight text-brand-ink sm:text-6xl">Tratamiento de datos</h1>
             <p className="mt-7 text-base leading-8 text-brand-charcoal/65">[REEMPLAZAR CON TEXTO OFICIAL DE TRATAMIENTO DE DATOS]</p>
             <div className="mt-10 rounded-2xl border border-brand-line bg-white p-8">
-              <FileCheck2 className="h-7 w-7 text-brand-green" />
+              <FileCheck2 className="h-7 w-7 text-brand-blue" />
               <h2 className="mt-5 font-display text-2xl font-semibold">Documento en construcción</h2>
               <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">La información legal definitiva se incorporará cuando esté disponible y validada por ENERMOVE.</p>
               <Link to="/contacto" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Contactar</Link>

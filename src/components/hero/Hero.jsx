@@ -1,9 +1,7 @@
-import { ArrowDown, ArrowRight, Bolt, Home, Leaf, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowRight, Bolt, Home, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { images } from '../../data/images';
-
-const indicators = ['Movilidad eléctrica', 'Energía limpia', 'Soluciones inteligentes'];
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -11,39 +9,25 @@ export default function Hero() {
   const contentY = useTransform(scrollY, [0, 350], [0, -24]);
 
   return (
-    <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-brand-ink text-white">
+    <section className="home-hero relative flex min-h-[88svh] items-end overflow-hidden bg-brand-ink text-white">
       <motion.div style={{ y: imageY }} className="absolute inset-0">
         <img src={images.hero} alt={images.heroAlt} className="h-full w-full object-cover" fetchpriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/70 to-brand-ink/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-ink via-transparent to-brand-ink/35" />
       </motion.div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,transparent,black)]" />
-      <div className="relative mx-auto flex w-full max-w-page flex-col px-5 pb-16 pt-40 sm:px-8 lg:px-12 lg:pb-24 lg:pt-48">
+      <div className="relative mx-auto flex w-full max-w-page flex-col px-[clamp(1rem,4vw,3rem)] pb-10 pt-28 sm:pb-14 sm:pt-32 lg:pt-40">
         <motion.div style={{ y: contentY }} className="max-w-4xl">
-          <div className="flex flex-wrap items-center gap-3">
-            {indicators.map((item, index) => (
-              <motion.span
-                key={item}
-                initial={{ opacity: 0, y: 14 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.25 + index * 0.1 }}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] backdrop-blur-md"
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-green" />
-                {item}
-              </motion.span>
-            ))}
-          </div>
           <motion.h1
-            className="mt-8 font-display text-5xl font-bold leading-[0.96] tracking-tight sm:text-7xl lg:text-[6.8rem]"
+            className="font-display text-4xl font-bold leading-[0.98] tracking-tight sm:text-5xl lg:text-[5.4rem]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            Energía que <span className="text-brand-green">conecta</span> tu hogar
+            Energía que <span className="text-brand-blue">conecta</span> tu hogar
           </motion.h1>
           <motion.p
-            className="mt-7 max-w-2xl text-base leading-8 text-white/75 sm:text-lg"
+            className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
@@ -51,34 +35,39 @@ export default function Hero() {
             Movilidad eléctrica y energía limpia para hogares y empresas.
           </motion.p>
           <motion.div
-            className="mt-10"
+            className="mt-8"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.46, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link to="/soluciones" className="inline-flex items-center gap-2 rounded-full bg-brand-green px-7 py-4 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-green-700">
+            <Link to="/soluciones" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:w-auto sm:justify-start">
               Conoce nuestras soluciones
               <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>
         </motion.div>
-        <motion.div className="mt-16 flex flex-wrap items-end justify-between gap-8 border-t border-white/15 pt-7" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.7 }}>
-          <div className="flex gap-8 sm:gap-12">
+        <motion.div
+          className="mt-10 flex flex-wrap items-center justify-between gap-x-8 gap-y-6 border-t border-white/15 pt-5"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
+          <div className="flex flex-wrap gap-x-6 gap-y-4 sm:gap-x-9">
             {[
               [Bolt, 'EV', 'Carga inteligente'],
               [Home, 'HOME', 'Soluciones residenciales'],
               [Leaf, 'SOLAR', 'Energía limpia'],
             ].map(([Icon, label, text]) => (
-              <div key={label} className="flex items-center gap-3">
-                <Icon className="h-5 w-5 text-brand-green" />
+              <div key={label} className="flex items-center gap-2.5">
+                <Icon className="h-4 w-4 shrink-0 text-brand-blue" />
                 <div>
-                  <p className="font-display text-xs font-bold tracking-[0.16em]">{label}</p>
-                  <p className="mt-1 text-[11px] text-white/55">{text}</p>
+                  <p className="font-display text-[10px] font-bold tracking-[0.16em] sm:text-xs">{label}</p>
+                  <p className="mt-0.5 text-[10px] text-white/55 sm:text-[11px]">{text}</p>
                 </div>
               </div>
             ))}
           </div>
-          <a href="#conoce-enermove" className="group inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/65 transition-colors hover:text-white">
+          <a href="#conoce-enermove" className="group inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/65 transition-colors hover:text-white sm:text-xs">
             Explora
             <span className="grid h-8 w-8 place-items-center rounded-full border border-white/20 transition-transform group-hover:translate-y-1"><ArrowDown className="h-3.5 w-3.5" /></span>
           </a>

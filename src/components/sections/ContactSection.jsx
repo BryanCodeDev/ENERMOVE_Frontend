@@ -20,8 +20,7 @@ export default function ContactSection() {
           <Reveal>
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Contacto</p>
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-brand-ink sm:text-5xl lg:text-6xl">Conversemos sobre tu proyecto.</h2>
-            <p className="mt-7 max-w-lg text-base leading-8 text-brand-charcoal/65">Cuéntanos qué necesitas y construyamos juntos una ruta clara para incorporar movilidad eléctrica y energía limpia.</p>
-            <div className="mt-10 space-y-5">
+            <div className="mt-8 space-y-5">
               {details.map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-center gap-4">
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-white text-brand-blue shadow-soft"><Icon className="h-5 w-5" /></span>
@@ -35,7 +34,7 @@ export default function ContactSection() {
           </Reveal>
           <Reveal delay={0.12} className="rounded-2xl border border-brand-line bg-white p-6 shadow-soft sm:p-8 lg:p-10">
             <div className="mb-8">
-              <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-green">Solicitud</p>
+              <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Solicitud</p>
               <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">Cuéntanos qué tienes en mente.</h3>
             </div>
             <QuoteForm compact />

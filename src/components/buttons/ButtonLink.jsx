@@ -5,8 +5,8 @@ export default function ButtonLink({ to, children, variant = 'primary', classNam
   const variants = {
     primary: 'bg-brand-blue text-white shadow-lift hover:bg-brand-blueDark hover:-translate-y-0.5',
     secondary: 'border border-brand-blue/25 text-brand-blue hover:border-brand-blue hover:bg-brand-blue hover:text-white',
-    dark: 'bg-brand-ink text-white hover:bg-brand-green',
-    outlineLight: 'border border-white/25 text-white hover:border-brand-green hover:bg-brand-green',
+    dark: 'bg-brand-ink text-white hover:bg-brand-blue',
+    outlineLight: 'border border-white/25 text-white hover:border-brand-blue hover:bg-brand-blue',
   };
 
   return (

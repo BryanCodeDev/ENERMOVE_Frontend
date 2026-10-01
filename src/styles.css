@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --shell-gutter: clamp(1rem, 4vw, 3rem);
   color: #2c2c2a;
   background: #f8f7f2;
   font-synthesis: none;
@@ -19,7 +20,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 280px;
   margin: 0;
   overflow-x: hidden;
 }
@@ -47,11 +48,11 @@ img {
 
 ::selection {
   color: #ffffff;
-  background: #639922;
+  background: #0c4ea8;
 }
 
 :focus-visible {
-  outline: 3px solid rgba(24, 95, 165, 0.35);
+  outline: 3px solid rgba(12, 78, 168, 0.45);
   outline-offset: 3px;
 }
 
@@ -67,6 +68,207 @@ img {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Compact vertical rhythm for the Home flow */
+.home-flow {
+  --home-section-y: clamp(2.75rem, 6vw, 5rem);
+  --home-grid-gap: clamp(0.875rem, 2vw, 1.25rem);
+  --home-block-gap: clamp(2.25rem, 4.5vw, 3.5rem);
+}
+
+.home-flow > section:not(.home-hero) {
+  padding-block: var(--home-section-y);
+}
+
+.home-flow .gap-3,
+.home-flow .gap-4,
+.home-flow .gap-5,
+.home-flow .gap-6 {
+  gap: var(--home-grid-gap);
+}
+
+.home-flow .gap-10,
+.home-flow .gap-12,
+.home-flow .gap-14 {
+  gap: var(--home-block-gap);
+}
+
+.home-flow .mt-10,
+.home-flow .mt-12,
+.home-flow .mt-14,
+.home-flow .mt-16 {
+  margin-top: var(--home-block-gap);
+}
+
+.home-flow h1 {
+  letter-spacing: -0.025em;
+}
+
+.home-flow h2 {
+  letter-spacing: -0.02em;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive system
+   Fluid tokens, capped media frames and container gutters for every breakpoint
+   from 280px phones up to ultrawide displays.
+--------------------------------------------------------------------------- */
+
+.page-shell {
+  --frame-max: min(78svh, 44rem);
+  --type-display: clamp(1.75rem, 1.2rem + 2.6vw, 3.5rem);
+  --type-hero: clamp(2.1rem, 1.1rem + 4.4vw, 5.4rem);
+  --type-lead: clamp(0.95rem, 0.9rem + 0.25vw, 1.125rem);
+}
+
+.page-shell section,
+.page-shell > div > section {
+  padding-inline: var(--shell-gutter);
+}
+
+.page-shell .max-w-page {
+  padding-inline: 0;
+}
+
+.page-footer > div {
+  padding-inline: var(--shell-gutter);
+}
+
+/* Headings scale with the viewport instead of jumping between breakpoints */
+.page-shell h1 {
+  font-size: clamp(1.9rem, 1.1rem + 3.1vw, 4.25rem);
+  line-height: 1.04;
+  overflow-wrap: break-word;
+}
+
+.page-shell h2 {
+  font-size: var(--type-display);
+  line-height: 1.08;
+  overflow-wrap: break-word;
+}
+
+.page-shell h3 {
+  overflow-wrap: break-word;
+}
+
+.page-shell .home-hero h1 {
+  font-size: var(--type-hero);
+}
+
+.page-shell .text-5xl.font-display,
+.page-shell .text-6xl.font-display,
+.page-shell .text-7xl.font-display {
+  font-size: clamp(1.9rem, 1.1rem + 3.1vw, 4.25rem);
+}
+
+.page-shell p {
+  text-wrap: pretty;
+}
+
+/* Media frames never exceed the viewport height on short or small screens */
+.media-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: min(60svh, 26rem);
+}
+
+.media-frame--portrait {
+  aspect-ratio: 5 / 4;
+}
+
+.media-frame--wide {
+  aspect-ratio: 16 / 10;
+  max-height: min(46svh, 22rem);
+}
+
+@media (min-width: 480px) {
+  .media-frame {
+    aspect-ratio: 4 / 5;
+    max-height: var(--frame-max);
+  }
+
+  .media-frame--portrait {
+    aspect-ratio: 4 / 5;
+  }
+
+  .media-frame--wide {
+    aspect-ratio: 16 / 10;
+    max-height: min(56svh, 26rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .media-frame--portrait {
+    aspect-ratio: 5 / 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-shell {
+    --frame-max: min(82svh, 40rem);
+  }
+
+  .media-frame {
+    aspect-ratio: 5 / 6;
+    max-height: var(--frame-max);
+  }
+
+  .media-frame--wide {
+    aspect-ratio: 16 / 10;
+    max-height: none;
+  }
+}
+
+@media (min-width: 1536px) {
+  .page-shell {
+    --type-display: 3.75rem;
+    --type-lead: 1.125rem;
+  }
+}
+
+/* Floating badges must never push past the viewport */
+.badge-float {
+  right: 0.5rem;
+  max-width: min(11rem, 45vw);
+}
+
+@media (min-width: 640px) {
+  .badge-float {
+    right: -2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .badge-float {
+    right: -3rem;
+    max-width: 14rem;
+  }
+}
+
+/* Tap targets stay finger-friendly on touch devices */
+@media (pointer: coarse) {
+  .page-shell a,
+  .page-shell button {
+    min-height: 2.75rem;
+  }
+
+  .page-shell .inline-flex.items-center.rounded-full {
+    padding-block: 0.75rem;
+  }
+}
+
+/* Very short landscape viewports (phones rotated, small laptops) */
+@media (max-height: 520px) and (orientation: landscape) {
+  .page-shell .home-hero {
+    min-height: 32rem;
+  }
+
+  .media-frame,
+  .media-frame--portrait,
+  .media-frame--wide {
+    max-height: 22rem;
   }
 }
 

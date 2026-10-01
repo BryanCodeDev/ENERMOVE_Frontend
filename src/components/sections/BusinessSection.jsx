@@ -15,35 +15,34 @@ export default function BusinessSection() {
       <div className="mx-auto max-w-page">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <motion.div initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-green">Soluciones empresariales</p>
+            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Soluciones empresariales</p>
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Infraestructura para la movilidad del futuro.</h2>
-            <p className="mt-7 max-w-lg text-base leading-8 text-white/65">Analizamos el contexto de tu proyecto para proponer una solución de carga coherente con los usos, las personas y la proyección del espacio.</p>
-            <div className="mt-9 grid gap-3 sm:grid-cols-3">
+            <p className="mt-6 max-w-lg text-base leading-8 text-white/65">Analizamos el contexto de tu proyecto para proponer una solución de carga coherente con los usos, las personas y la proyección del espacio.</p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {cases.map(({ icon: Icon, title }) => (
                 <div key={title} className="rounded-xl border border-white/10 bg-white/[0.04] p-4">
-                  <Icon className="h-5 w-5 text-brand-green" />
-                  <p className="mt-4 font-display text-sm font-semibold">{title}</p>
-                  <span className="mt-4 block h-1 w-7 rounded-full bg-brand-green/70" />
+                  <Icon className="h-5 w-5 shrink-0 text-brand-blue" />
+                  <p className="mt-3 font-display text-sm font-semibold">{title}</p>
                 </div>
               ))}
             </div>
-            <Link to="/contacto" className="mt-9 inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold transition-all hover:border-brand-green hover:bg-brand-green hover:text-white">
+            <Link to="/contacto" className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">
               Solicitar asesoría
               <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>
           <motion.div className="relative" initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-brand-line">
-              <img src={images.business} alt={images.businessAlt} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
+            <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">
+              <img src={images.business} alt="" aria-hidden="true" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/65 via-brand-ink/10 to-transparent" />
-              <div className="absolute bottom-7 left-7 right-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-green">Proyectos que avanzan</p>
-                <p className="mt-2 font-display text-2xl font-semibold">Carga con visión de futuro</p>
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-7 sm:left-7 sm:right-7">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-blue sm:text-xs">Proyectos que avanzan</p>
+                <p className="mt-2 font-display text-lg font-semibold leading-tight sm:text-2xl">Carga con visión de futuro</p>
               </div>
             </div>
-            <div className="absolute -bottom-6 -left-6 rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur-md sm:-left-10">
-              <p className="font-display text-3xl font-bold text-brand-green">B2B</p>
-              <p className="mt-1 text-xs leading-5 text-white/70">Acompañamiento para decisiones estratégicas</p>
+            <div className="absolute -bottom-5 -left-3 max-w-[70%] rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-md sm:-bottom-6 sm:-left-10 sm:max-w-none sm:p-5">
+              <p className="font-display text-2xl font-bold text-brand-blue sm:text-3xl">B2B</p>
+              <p className="mt-1 text-[11px] leading-5 text-white/70 sm:text-xs">Acompañamiento para decisiones estratégicas</p>
             </div>
           </motion.div>
         </div>

@@ -31,7 +31,7 @@ export default function Layout() {
     <div className={`min-h-screen bg-brand-sand text-brand-charcoal font-body ${isReady ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
       <ScrollToTop />
       <Navbar />
-      <main>
+      <main className="page-shell">
         <Outlet />
       </main>
       <Footer />

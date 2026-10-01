@@ -20,7 +20,7 @@ export default function Contact() {
           <Breadcrumbs items={[{ label: 'Contacto' }]} />
           <div className="mt-12 max-w-4xl">
             <Reveal>
-              <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-green">Contacto</p>
+              <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Contacto</p>
               <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Conversemos sobre tu proyecto.</h1>
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/65">Cuéntanos qué necesitas y construyamos una ruta clara para incorporar soluciones de movilidad eléctrica y energía limpia.</p>
             </Reveal>

@@ -1,12 +1,8 @@
-import { ArrowRight, Check, Sun, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import Hero from '../components/hero/Hero';
 import ValueProposition from '../components/sections/ValueProposition';
 import AboutPreview from '../components/sections/AboutPreview';
 import SolutionsOverview from '../components/sections/SolutionsOverview';
 import ResidentialSection from '../components/sections/ResidentialSection';
-import BusinessSection from '../components/sections/BusinessSection';
 import SolarSection from '../components/sections/SolarSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import ProcessSection from '../components/sections/ProcessSection';
@@ -23,13 +19,12 @@ export default function Home() {
   });
 
   return (
-    <>
+    <div className="home-flow">
       <Hero />
       <ValueProposition />
       <AboutPreview />
       <SolutionsOverview />
       <ResidentialSection />
-      <BusinessSection />
       <SolarSection />
       <ServicesSection />
       <ProcessSection />
@@ -37,6 +32,6 @@ export default function Home() {
       <VehicleChargerSection />
       <ContactSection />
       <CTASection />
-    </>
+    </div>
   );
 }
