@@ -43,7 +43,7 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.12} className="relative">
               <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">
-                <img src={images.team} alt={images.teamAlt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
+                <img src={images.nosotros} alt={images.nosotrosAlt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/55 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white sm:bottom-7 sm:left-7 sm:right-7">
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-brand-blue sm:text-xs">Empresa colombiana</p>
