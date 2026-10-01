@@ -6,7 +6,7 @@ import { images } from '../../data/images';
 export default function ResidentialSection() {
   return (
     <section id="carga-residencial" className="bg-white px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto grid max-w-page items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-page items-center gap-14 lg:grid-cols-2 lg:gap-20 overflow-x-hidden">
         <motion.div className="relative order-2 lg:order-1" initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.8 }}>
           <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">
             <img src={images.residential} alt={images.residentialAlt} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />

@@ -6,7 +6,7 @@ import { images } from '../../data/images';
 export default function SolarSection() {
   return (
     <section id="energia-solar" className="bg-brand-ink px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-page">
+      <div className="mx-auto max-w-page overflow-x-hidden">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <motion.div className="relative" initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
             <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">

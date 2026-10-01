@@ -15,7 +15,7 @@ export default function ServicesSection() {
           description="De la primera conversación al seguimiento posterior."
         />
 
-        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-6">
+        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-6 overflow-x-hidden">
           {services.map((service, index) => {
             const Icon = service.icon;
             const animation = reduceMotion

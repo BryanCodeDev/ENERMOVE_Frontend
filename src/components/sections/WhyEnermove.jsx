@@ -12,7 +12,7 @@ const items = [
 export default function WhyEnermove() {
   return (
     <section className="bg-brand-ink px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-page">
+      <div className="mx-auto max-w-page overflow-x-hidden">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Por qué ENERMOVE</p>

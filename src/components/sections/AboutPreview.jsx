@@ -7,7 +7,7 @@ import Reveal from '../ui/Reveal';
 export default function AboutPreview() {
   return (
     <section id="conoce-enermove" className="bg-brand-sand px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-page">
+      <div className="mx-auto max-w-page overflow-x-hidden">
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <Reveal>
             <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">

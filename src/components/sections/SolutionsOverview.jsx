@@ -18,7 +18,7 @@ export default function SolutionsOverview() {
             <ArrowRight className="h-4 w-4 transition-transform hover:translate-x-1" />
           </Link>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3 overflow-x-hidden">
           {solutions.slice(0, 6).map((solution, index) => (
             <SolutionCard key={solution.slug} solution={solution} index={index} />
           ))}

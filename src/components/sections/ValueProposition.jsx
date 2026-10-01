@@ -18,7 +18,7 @@ export default function ValueProposition() {
           </motion.div>
           <div className="relative">
             <div className="absolute -left-6 -top-8 h-32 w-32 rounded-full bg-brand-blue/10 blur-2xl" />
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 overflow-x-hidden">
               {company.principles.map((item, index) => (
                 <motion.div
                   key={item.number}

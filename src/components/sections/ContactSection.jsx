@@ -17,7 +17,7 @@ const details = [
 const ContactSection = memo(function ContactSection() {
   return (
     <section id="contacto" className="bg-brand-sand px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-page">
+      <div className="mx-auto max-w-page overflow-x-hidden">
         <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <Reveal>
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Contacto</p>

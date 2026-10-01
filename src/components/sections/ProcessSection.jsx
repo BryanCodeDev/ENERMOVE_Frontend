@@ -10,7 +10,7 @@ export default function ProcessSection() {
     <section className="relative overflow-hidden bg-brand-blue px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28">
       <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-3xl sm:h-96 sm:w-96" />
       <div className="absolute -bottom-28 -left-20 h-72 w-72 rounded-full bg-brand-blueDark/40 blur-3xl sm:h-96 sm:w-96" />
-      <div className="relative mx-auto max-w-page">
+      <div className="relative mx-auto max-w-page overflow-x-hidden">
         <SectionHeading inverted align="center" eyebrow="Nuestro proceso" title="Una ruta clara, de la idea a la acción." />
         <div className="relative mt-12">
           <div className="absolute left-8 right-8 top-5 hidden h-px bg-white/20 lg:block" />
