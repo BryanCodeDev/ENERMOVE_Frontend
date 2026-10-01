@@ -9,7 +9,6 @@ import ProcessSection from '../components/sections/ProcessSection';
 import WhyEnermove from '../components/sections/WhyEnermove';
 import VehicleChargerSection from '../components/sections/VehicleChargerSection';
 import ContactSection from '../components/sections/ContactSection';
-import CTASection from '../components/sections/CTASection';
 import { useSeo } from '../utils/seo';
 
 export default function Home() {
@@ -31,7 +30,6 @@ export default function Home() {
       <WhyEnermove />
       <VehicleChargerSection />
       <ContactSection />
-      <CTASection />
     </div>
   );
 }
