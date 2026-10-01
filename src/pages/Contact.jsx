@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 import { contactConfig } from '../config/contact';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Reveal from '../components/ui/Reveal';

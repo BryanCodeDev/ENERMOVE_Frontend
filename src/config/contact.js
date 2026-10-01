@@ -1,9 +1,9 @@
 export const contactConfig = {
   tagline: 'Energía que conecta tu hogar',
-  whatsappNumber: '[REEMPLAZAR_CON_NUMERO_WHATSAPP]',
+  whatsappNumber: '573014815460',
   whatsappMessage: 'Hola, estoy interesado en conocer las soluciones de EnerMove.',
   email: '[REEMPLAZAR_CON_EMAIL_OFICIAL]',
-  phone: '[REEMPLAZAR_CON_TELEFONO]',
+  phone: '+57 301 4815460',
   city: '[REEMPLAZAR_CON_CIUDAD]',
   address: '[REEMPLAZAR_CON_DIRECCION]',
   social: {

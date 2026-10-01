@@ -1,6 +1,7 @@
-import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { contactConfig } from '../../config/contact';
+import WhatsAppIcon from '../icons/WhatsAppIcon';
+import { contactConfig, getWhatsAppUrl } from '../../config/contact';
 import logo from '../../assets/images/logo.webp';
 
 const navigation = [
@@ -99,8 +100,8 @@ export default function Footer() {
                 <span>{contactConfig.city} {contactConfig.address && `· ${contactConfig.address}`}</span>
               </li>
               <li className="flex gap-3">
-                <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
-                <span>WhatsApp disponible próximamente</span>
+                <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
+                <a className="hover:text-white" href={getWhatsAppUrl()} target="_blank" rel="noreferrer">{contactConfig.phone}</a>
               </li>
             </ul>
           </div>

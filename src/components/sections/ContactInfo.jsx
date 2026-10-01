@@ -1,5 +1,6 @@
-import { ArrowRight, Check, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, Check, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import WhatsAppIcon from '../icons/WhatsAppIcon';
 import { contactConfig, getWhatsAppUrl } from '../../config/contact';
 import Reveal from '../ui/Reveal';
 
@@ -9,7 +10,7 @@ export default function ContactInfo() {
     [Mail, 'Email', contactConfig.email, `mailto:${contactConfig.email}`],
     [Phone, 'Teléfono', contactConfig.phone, `tel:${contactConfig.phone}`],
     [MapPin, 'Ubicación', `${contactConfig.city} · ${contactConfig.address}`, null],
-    [MessageCircle, 'WhatsApp', whatsappHref === '#' ? 'Pendiente de configuración' : 'Abrir chat', whatsappHref === '#' ? null : whatsappHref],
+    [WhatsAppIcon, 'WhatsApp', whatsappHref === '#' ? 'Pendiente de configuración' : contactConfig.phone, whatsappHref === '#' ? null : whatsappHref],
   ];
 
   return (

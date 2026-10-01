@@ -1,5 +1,6 @@
-import { ArrowRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import WhatsAppIcon from '../icons/WhatsAppIcon';
 import { contactConfig, getWhatsAppUrl } from '../../config/contact';
 import QuoteForm from '../forms/QuoteForm';
 import Reveal from '../ui/Reveal';
@@ -9,7 +10,7 @@ const details = [
   { icon: Mail, label: 'Email', value: contactConfig.email, href: `mailto:${contactConfig.email}` },
   { icon: Phone, label: 'Teléfono', value: contactConfig.phone, href: `tel:${contactConfig.phone}` },
   { icon: MapPin, label: 'Ubicación', value: `${contactConfig.city} · ${contactConfig.address}` },
-  { icon: MessageCircle, label: 'WhatsApp', value: whatsappHref === '#' ? 'Pendiente de configuración' : 'Abrir chat', href: whatsappHref === '#' ? null : whatsappHref },
+  { icon: WhatsAppIcon, label: 'WhatsApp', value: whatsappHref === '#' ? 'Pendiente de configuración' : contactConfig.phone, href: whatsappHref === '#' ? null : whatsappHref },
 ];
 
 export default function ContactSection() {
