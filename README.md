@@ -57,7 +57,7 @@ Los contenidos temporales están separados en `src/data`. Las referencias de im�
 ## Configuración
 
 - El número de WhatsApp y los datos de contacto se configuran en `src/config/contact.js`.
-- El formulario de cotización prepara los datos para una futura conexión con `POST /api/leads` sin realizar llamadas ficticias.
+- El formulario de cotización envía los datos a `POST /api/leads`, que es una Netlify Function connected a Resend. Al enviar correctamente redirige a WhatsApp con el resumen del formulario.
 - Los textos corporativos pendientes están marcados con `[REEMPLAZAR ...]`.
 - Las URLs de imágenes son referencias temporales de alta calidad y deben reemplazarse por los archivos definitivos.
 
@@ -73,9 +73,19 @@ Actualiza los placeholders en `src/data/company.js`, `src/data/services.js` y `s
 
 ## Despliegue en Netlify
 
-El archivo `netlify.toml` configura el build de Vite y el fallback de React Router:
+El archivo `netlify.toml` configura el build de Vite, la Netlify Function del formulario y el fallback de React Router:
 
 ```toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/leads"
+  to = "/.netlify/functions/leads"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -83,3 +93,20 @@ El archivo `netlify.toml` configura el build de Vite y el fallback de React Rout
 ```
 
 Conecta el repositorio a Netlify y usa `npm run build` como comando de producción.
+
+### Formulario de cotización (Resend)
+
+El formulario no llama a Resend desde el navegador: lo hace `netlify/functions/leads.mjs`, una función serverless que corre en la misma cuenta de Netlify. La API key nunca se expone al cliente.
+
+Configura las variables de entorno en **Netlify → Site configuration → Environment variables** (no en un archivo):
+
+| Variable | Valor | Notas |
+| --- | --- | --- |
+| `RESEND_API_KEY` | `re_...` | Se obtiene en resend.com → API Keys. Es la única obligatoria. |
+| `LEADS_RECIPIENT` | `mastercodecompany@gmail.com` | Destinatario de las solicitudes. |
+| `RESEND_FROM` | `onboarding@resend.dev` | Remitente. Ver nota de abajo. |
+
+Importante sobre el remitente: mientras no verifiques un dominio propio en Resend, el único remitente permitido es `onboarding@resend.dev`, y a su vez Resend solo permite enviar a **el mismo correo con el que creaste la cuenta**. Por eso la cuenta de Resend debe registrarse con `mastercodecompany@gmail.com`. Más adelante, al verificar un dominio (por ejemplo `enermove.co`), cambia `RESEND_FROM` a `Notificaciones <notificaciones@enermove.co>`.
+
+Después de añadir las variables, redeploya el sitio (Netlify no inyecta variables en despliegues ya existentes).
+
