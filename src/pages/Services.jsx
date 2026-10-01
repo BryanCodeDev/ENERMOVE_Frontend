@@ -7,7 +7,15 @@ import ServicesSection from '../components/sections/ServicesSection';
 import ProcessSection from '../components/sections/ProcessSection';
 import ContactInfo from '../components/sections/ContactInfo';
 import CTASection from '../components/sections/CTASection';
-import { useSeo } from '../utils/seo';
+import JsonLd from '../components/ui/JsonLd';
+import { useSeo, serviceSchema, breadcrumbSchema } from '../utils/seo';
+
+const services = [
+  { title: 'Asesoría especializada', category: 'Consultoría', features: ['Diagnóstico de necesidades', 'Análisis de viabilidad técnica', 'Recomendación de tecnología'] },
+  { title: 'Selección de equipos', category: 'Especificación', features: ['Comparativa de fabricantes', 'Dimensionamiento de cargadores', 'Compatibilidad vehicular'] },
+  { title: 'Diseño de soluciones', category: 'Ingeniería', features: ['Planos unifilares', 'Cálculo de protecciones', 'Integración con solar'] },
+  { title: 'Integración energética', category: 'Sistemas', features: ['Gestión de carga inteligente', 'Monitoreo remoto', 'Optimización de demanda'] },
+];
 
 export default function Services() {
   useSeo({
@@ -16,8 +24,16 @@ export default function Services() {
     canonical: 'https://enermove.example/servicios',
   });
 
+  const breadcrumbData = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://enermove.example/' },
+    { name: 'Servicios', url: 'https://enermove.example/servicios' },
+  ]);
+  const serviceSchemas = services.map(serviceSchema);
+
   return (
     <>
+      <JsonLd id="breadcrumb-schema" data={breadcrumbData} />
+      {serviceSchemas.map((schema, i) => <JsonLd key={`service-${i}`} data={schema} />)}
       <section className="bg-brand-sand px-5 pt-32 pb-20 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
         <div className="mx-auto max-w-page">
           <Breadcrumbs items={[{ label: 'Servicios' }]} />

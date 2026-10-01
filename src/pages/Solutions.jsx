@@ -9,7 +9,8 @@ import ResidentialSection from '../components/sections/ResidentialSection';
 import BusinessSection from '../components/sections/BusinessSection';
 import SolarSection from '../components/sections/SolarSection';
 import CTASection from '../components/sections/CTASection';
-import { useSeo } from '../utils/seo';
+import JsonLd from '../components/ui/JsonLd';
+import { useSeo, solutionSchema, breadcrumbSchema } from '../utils/seo';
 
 export default function Solutions() {
   useSeo({
@@ -18,8 +19,16 @@ export default function Solutions() {
     canonical: 'https://enermove.example/soluciones',
   });
 
+  const breadcrumbData = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://enermove.example/' },
+    { name: 'Soluciones', url: 'https://enermove.example/soluciones' },
+  ]);
+  const solutionSchemas = solutions.map(solutionSchema);
+
   return (
     <>
+      <JsonLd id="breadcrumb-schema" data={breadcrumbData} />
+      {solutionSchemas.map((schema, i) => <JsonLd key={`solution-${i}`} data={schema} />)}
       <section className="bg-brand-ink px-5 pt-32 pb-20 text-white sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
         <div className="mx-auto max-w-page">
           <Breadcrumbs items={[{ label: 'Soluciones' }]} />

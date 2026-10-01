@@ -2,12 +2,25 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Reveal from '../components/ui/Reveal';
-import { useSeo } from '../utils/seo';
+import JsonLd from '../components/ui/JsonLd';
+import { useSeo, breadcrumbSchema } from '../utils/seo';
 
 export default function PrivacyPolicy() {
-  useSeo({ title: 'Política de privacidad | ENERMOVE', description: 'Política de privacidad de ENERMOVE.' });
+  useSeo({
+    title: 'Política de privacidad | ENERMOVE',
+    description: 'Política de privacidad de ENERMOVE.',
+    canonical: 'https://enermove.example/politica-de-privacidad',
+    noIndex: true,
+  });
+
+  const breadcrumbData = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://enermove.example/' },
+    { name: 'Política de privacidad', url: 'https://enermove.example/politica-de-privacidad' },
+  ]);
+
   return (
     <>
+      <JsonLd id="breadcrumb-schema" data={breadcrumbData} />
       <section className="bg-brand-sand px-5 pt-32 pb-20 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
         <div className="mx-auto max-w-3xl">
           <Breadcrumbs items={[{ label: 'Política de privacidad' }]} />

@@ -20,7 +20,7 @@ export const seoDefaults = {
   image: '/enermove-og.jpg',
 };
 
-export function useSeo({ title, description, canonical, image, type = 'website' }) {
+export function useSeo({ title, description, canonical, image, type = 'website', noIndex = false, noFollow = false }) {
   useEffect(() => {
     const pageCanonical = canonical || siteUrl;
     document.title = title || seoDefaults.title;
@@ -30,10 +30,13 @@ export function useSeo({ title, description, canonical, image, type = 'website' 
     setMeta('og:type', type, 'property');
     setMeta('og:url', pageCanonical, 'property');
     setMeta('og:image', image || seoDefaults.image, 'property');
+    setMeta('og:site_name', 'ENERMOVE', 'property');
+    setMeta('og:locale', 'es_CO', 'property');
     setMeta('twitter:card', 'summary_large_image');
     setMeta('twitter:title', title || seoDefaults.title);
     setMeta('twitter:description', description || seoDefaults.description);
     setMeta('twitter:image', image || seoDefaults.image);
+    setMeta('robots', `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`);
 
     let canonicalLink = document.querySelector('link[rel="canonical"]');
     if (!canonicalLink) {
@@ -42,7 +45,7 @@ export function useSeo({ title, description, canonical, image, type = 'website' 
       document.head.appendChild(canonicalLink);
     }
     canonicalLink.href = pageCanonical;
-  }, [title, description, canonical, image, type]);
+  }, [title, description, canonical, image, type, noIndex, noFollow]);
 }
 
 export const getCanonicalUrl = (path = '') => `${siteUrl}${path.startsWith('/') ? path : `/${path}`}`;
@@ -52,8 +55,19 @@ export const organizationSchema = {
   '@type': 'Organization',
   name: 'ENERMOVE',
   url: siteUrl,
+  logo: `${siteUrl}/logo.svg`,
   description: seoDefaults.description,
-  areaServed: 'Colombia',
+  areaServed: { '@type': 'Country', name: 'Colombia' },
+  sameAs: [
+    'https://wa.me/573000000000',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+57-300-000-0000',
+    contactType: 'customer service',
+    availableLanguage: ['Spanish'],
+    areaServed: 'CO',
+  },
 };
 
 export const webSiteSchema = {
@@ -62,6 +76,38 @@ export const webSiteSchema = {
   name: 'ENERMOVE',
   url: siteUrl,
   inLanguage: 'es-CO',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteUrl}/buscar?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+export const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'ENERMOVE',
+  url: siteUrl,
+  logo: `${siteUrl}/logo.svg`,
+  description: seoDefaults.description,
+  areaServed: { '@type': 'Country', name: 'Colombia' },
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'CO',
+    addressLocality: 'Bogotá',
+    addressRegion: 'Cundinamarca',
+  },
+  telephone: '+57-300-000-0000',
+  priceRange: '$$',
+  currenciesAccepted: 'COP',
+  paymentAccepted: 'Cash, Credit Card, Transfer',
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '09:00', closes: '13:00' },
+  ],
 };
 
 export const productSchema = (product) => ({
@@ -70,11 +116,58 @@ export const productSchema = (product) => ({
   name: product.name,
   description: product.description,
   brand: { '@type': 'Brand', name: product.brand },
+  sku: product.slug,
+  mpn: product.model,
   additionalProperty: [
     { '@type': 'PropertyValue', name: 'Modelo', value: product.model },
     { '@type': 'PropertyValue', name: 'Potencia', value: product.power },
     { '@type': 'PropertyValue', name: 'Conector', value: product.connector },
   ],
+  category: product.categoryName,
+  image: product.gallery?.[0] || `${siteUrl}${product.image}`,
+  offers: {
+    '@type': 'Offer',
+    name: product.name,
+    description: product.description,
+    priceCurrency: 'COP',
+    availability: 'https://schema.org/PreOrder',
+    seller: { '@type': 'Organization', name: 'ENERMOVE' },
+  },
+});
+
+export const serviceSchema = (service) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.title,
+  description: service.description,
+  provider: { '@type': 'Organization', name: 'ENERMOVE', url: siteUrl },
+  areaServed: { '@type': 'Country', name: 'Colombia' },
+  serviceType: service.category,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: service.title,
+    itemListElement: service.features?.map((feature, index) => ({
+      '@type': 'Offer',
+      position: index + 1,
+      itemOffered: {
+        '@type': 'Service',
+        name: feature,
+      },
+    })) || [],
+  },
+});
+
+export const faqSchema = (faqs) => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
 });
 
 export const articleSchema = (post) => ({
@@ -84,8 +177,10 @@ export const articleSchema = (post) => ({
   description: post.excerpt,
   image: post.image,
   datePublished: post.date,
+  dateModified: post.date,
   author: { '@type': 'Organization', name: 'ENERMOVE' },
-  publisher: { '@type': 'Organization', name: 'ENERMOVE' },
+  publisher: { '@type': 'Organization', name: 'ENERMOVE', logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.svg` } },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': post.url },
 });
 
 export const breadcrumbSchema = (items) => ({
@@ -97,4 +192,26 @@ export const breadcrumbSchema = (items) => ({
     name: item.name,
     item: item.url,
   })),
+});
+
+export const solutionSchema = (solution) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: solution.title,
+  description: solution.description,
+  provider: { '@type': 'Organization', name: 'ENERMOVE', url: siteUrl },
+  areaServed: { '@type': 'Country', name: 'Colombia' },
+  serviceType: 'Solución de movilidad eléctrica',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: solution.title,
+    itemListElement: solution.features?.map((feature, index) => ({
+      '@type': 'Offer',
+      position: index + 1,
+      itemOffered: {
+        '@type': 'Service',
+        name: feature,
+      },
+    })) || [],
+  },
 });

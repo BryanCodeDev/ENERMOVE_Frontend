@@ -1,0 +1,24 @@
+# ENERMOVE - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://enermove.example/sitemap.xml
+
+# Disallow admin/private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /checkout/
+Disallow: /carrito/
+Disallow: /login/
+Disallow: /registro/
+Disallow: /cuenta/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 10
+
+# Host
+Host: https://enermove.example

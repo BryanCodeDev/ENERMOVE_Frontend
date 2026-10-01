@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://enermove.example/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/nosotros</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/nosotros" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/nosotros" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/soluciones</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/soluciones" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/soluciones" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/servicios</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/servicios" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/servicios" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/catalogo</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/catalogo/carga-residencial</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo/carga-residencial" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo/carga-residencial" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/catalogo/carga-empresarial</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo/carga-empresarial" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo/carga-empresarial" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/catalogo/cargadores-portatiles</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo/cargadores-portatiles" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo/cargadores-portatiles" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/contacto" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/politica-de-privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/politica-de-privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/politica-de-privacidad" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enermove.example/tratamiento-de-datos</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/tratamiento-de-datos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/tratamiento-de-datos" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+</urlset>

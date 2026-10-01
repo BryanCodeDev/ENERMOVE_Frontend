@@ -7,7 +7,8 @@ import SectionHeading from '../components/ui/SectionHeading';
 import ProductCard from '../components/cards/ProductCard';
 import CatalogIntro from '../components/sections/CatalogIntro';
 import CTASection from '../components/sections/CTASection';
-import { useSeo } from '../utils/seo';
+import JsonLd from '../components/ui/JsonLd';
+import { useSeo, breadcrumbSchema } from '../utils/seo';
 
 export default function Catalog() {
   const { category } = useParams();
@@ -16,14 +17,25 @@ export default function Catalog() {
   const title = activeCategory ? activeCategory.label : 'Catálogo informativo';
   const description = activeCategory ? activeCategory.description : 'Explora referencias informativas de carga rápida DC, carga normal AC y cargadores portátiles.';
 
+  const canonical = `https://enermove.example/catalogo${category ? `/${category}` : ''}`;
   useSeo({
     title: `${title} | ENERMOVE`,
     description,
-    canonical: `https://enermove.example/catalogo${category ? `/${category}` : ''}`,
+    canonical,
   });
+
+  const breadcrumbItems = [
+    { name: 'Inicio', url: 'https://enermove.example/' },
+    { name: 'Catálogo', url: 'https://enermove.example/catalogo' },
+  ];
+  if (activeCategory) {
+    breadcrumbItems.push({ name: activeCategory.label, url: canonical });
+  }
+  const breadcrumbData = breadcrumbSchema(breadcrumbItems);
 
   return (
     <>
+      <JsonLd id="breadcrumb-schema" data={breadcrumbData} />
       <section className="bg-brand-ink px-5 pt-32 pb-20 text-white sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
         <div className="mx-auto max-w-page">
           <Breadcrumbs items={[{ label: 'Catálogo' }, ...(activeCategory ? [{ label: activeCategory.label }] : [])]} />

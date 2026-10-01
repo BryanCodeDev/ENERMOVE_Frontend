@@ -9,7 +9,8 @@ import ProcessSection from '../components/sections/ProcessSection';
 import WhyEnermove from '../components/sections/WhyEnermove';
 import VehicleChargerSection from '../components/sections/VehicleChargerSection';
 import ContactSection from '../components/sections/ContactSection';
-import { useSeo } from '../utils/seo';
+import JsonLd from '../components/ui/JsonLd';
+import { useSeo, organizationSchema, webSiteSchema, localBusinessSchema } from '../utils/seo';
 
 export default function Home() {
   useSeo({
@@ -18,18 +19,23 @@ export default function Home() {
   });
 
   return (
-    <div className="home-flow">
-      <Hero />
-      <ValueProposition />
-      <AboutPreview />
-      <SolutionsOverview />
-      <ResidentialSection />
-      <SolarSection />
-      <ServicesSection />
-      <ProcessSection />
-      <WhyEnermove />
-      <VehicleChargerSection />
-      <ContactSection />
-    </div>
+    <>
+      <JsonLd id="organization-schema" data={organizationSchema} />
+      <JsonLd id="website-schema" data={webSiteSchema} />
+      <JsonLd id="localbusiness-schema" data={localBusinessSchema} />
+      <div className="home-flow">
+        <Hero />
+        <ValueProposition />
+        <AboutPreview />
+        <SolutionsOverview />
+        <ResidentialSection />
+        <SolarSection />
+        <ServicesSection />
+        <ProcessSection />
+        <WhyEnermove />
+        <VehicleChargerSection />
+        <ContactSection />
+      </div>
+    </>
   );
 }

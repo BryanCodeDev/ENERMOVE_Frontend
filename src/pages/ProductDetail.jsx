@@ -7,7 +7,7 @@ import ProductGallery from '../components/products/ProductGallery';
 import QuoteForm from '../components/forms/QuoteForm';
 import JsonLd from '../components/ui/JsonLd';
 import NotFoundContent from '../components/sections/NotFoundContent';
-import { productSchema, useSeo } from '../utils/seo';
+import { productSchema, useSeo, breadcrumbSchema } from '../utils/seo';
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -17,16 +17,25 @@ export default function ProductDetail() {
     return <NotFoundContent />;
   }
 
+  const canonical = `https://enermove.example/producto/${product.slug}`;
   useSeo({
     title: `${product.name} | ENERMOVE`,
     description: product.description,
-    canonical: `https://enermove.example/producto/${product.slug}`,
+    canonical,
     type: 'product',
   });
 
+  const breadcrumbData = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://enermove.example/' },
+    { name: 'Catálogo', url: 'https://enermove.example/catalogo' },
+    { name: product.categoryName, url: `https://enermove.example/catalogo/${product.category}` },
+    { name: product.name, url: canonical },
+  ]);
+
   return (
     <>
-      <JsonLd data={productSchema(product)} />
+      <JsonLd id="product-schema" data={productSchema(product)} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbData} />
       <section className="bg-brand-sand px-5 pt-32 pb-20 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
         <div className="mx-auto max-w-page">
           <Breadcrumbs items={[{ label: 'Catálogo', to: '/catalogo' }, { label: product.categoryName, to: `/catalogo/${product.category}` }, { label: product.name }]} />
