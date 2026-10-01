@@ -13,6 +13,12 @@ import cargador3 from '../assets/images/cargador3.webp';
 import cargador4 from '../assets/images/cargador4.webp';
 import cargador5 from '../assets/images/cargador5.webp';
 import cargador6 from '../assets/images/cargador6.webp';
+import img1 from '../assets/images/1.webp';
+import img3 from '../assets/images/3.webp';
+import img4 from '../assets/images/4.webp';
+import img7 from '../assets/images/7.webp';
+import img9 from '../assets/images/9.webp';
+import img10 from '../assets/images/10.webp';
 
 export const images = {
   hero: heroImg,
@@ -38,6 +44,12 @@ export const images = {
   cargador4,
   cargador5,
   cargador6,
+  img1,
+  img3,
+  img4,
+  img7,
+  img9,
+  img10,
   productDefault: chargerImg,
 };
 
