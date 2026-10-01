@@ -4,6 +4,7 @@ import WhatsAppIcon from '../icons/WhatsAppIcon';
 import { contactConfig, getWhatsAppUrl } from '../../config/contact';
 import QuoteForm from '../forms/QuoteForm';
 import Reveal from '../ui/Reveal';
+import { memo } from 'react';
 
 const whatsappHref = getWhatsAppUrl();
 const details = [
@@ -13,7 +14,7 @@ const details = [
   { icon: WhatsAppIcon, label: 'WhatsApp', value: whatsappHref === '#' ? 'Pendiente de configuración' : contactConfig.phone, href: whatsappHref === '#' ? null : whatsappHref },
 ];
 
-export default function ContactSection() {
+const ContactSection = memo(function ContactSection() {
   return (
     <section id="contacto" className="bg-brand-sand px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
       <div className="mx-auto max-w-page">
@@ -44,4 +45,6 @@ export default function ContactSection() {
       </div>
     </section>
   );
-}
+});
+
+export default ContactSection;

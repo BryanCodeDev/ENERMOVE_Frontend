@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { AlertCircle, CheckCircle2, Loader2, Send } from 'lucide-react';
+import { useState, memo } from 'react';
+import { AlertCircle, CheckCircle2, Loader2, Send, Building2, User } from 'lucide-react';
 import { createLeadPayload, getWhatsAppUrlForLead, submitLead } from '../../services/leads';
 
 const initialForm = {
@@ -15,7 +15,7 @@ const initialForm = {
 
 const fieldClass = 'rounded-xl border border-brand-line bg-white px-4 py-3.5 text-sm font-normal normal-case tracking-normal text-brand-ink outline-none transition-colors focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/10';
 
-export default function QuoteForm({ compact = false }) {
+const QuoteForm = memo(function QuoteForm({ compact = false }) {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
@@ -72,7 +72,31 @@ export default function QuoteForm({ compact = false }) {
       </label>
 
       <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-charcoal/70">Nombre<input required name="nombre" value={form.nombre} onChange={update} className={fieldClass} placeholder="Tu nombre" /></label>
-      <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-charcoal/70">Empresa<input name="empresa" value={form.empresa} onChange={update} className={fieldClass} placeholder="Nombre de la empresa" /></label>
+      <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-charcoal/70">
+        Empresa
+        <div className="grid grid-cols-2 gap-2" role="radiogroup" aria-label="Tipo de entidad">
+          <button
+            type="button"
+            role="radio"
+            aria-checked={form.empresa === 'empresa'}
+            onClick={() => update({ target: { name: 'empresa', value: 'empresa' } })}
+            className={`relative flex items-center justify-center gap-2 rounded-xl border-2 px-4 py-3.5 text-sm font-medium transition-all ${form.empresa === 'empresa' ? 'border-brand-blue bg-brand-blue/10 text-brand-blue' : 'border-brand-line bg-white text-brand-charcoal/60 hover:border-brand-blue/50 hover:bg-brand-blue/5'}`}
+          >
+            <Building2 className="h-4 w-4" aria-hidden="true" />
+            <span>Empresa</span>
+          </button>
+          <button
+            type="button"
+            role="radio"
+            aria-checked={form.empresa === 'persona_natural'}
+            onClick={() => update({ target: { name: 'empresa', value: 'persona_natural' } })}
+            className={`relative flex items-center justify-center gap-2 rounded-xl border-2 px-4 py-3.5 text-sm font-medium transition-all ${form.empresa === 'persona_natural' ? 'border-brand-blue bg-brand-blue/10 text-brand-blue' : 'border-brand-line bg-white text-brand-charcoal/60 hover:border-brand-blue/50 hover:bg-brand-blue/5'}`}
+          >
+            <User className="h-4 w-4" aria-hidden="true" />
+            <span>Persona natural</span>
+          </button>
+        </div>
+      </label>
       <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-charcoal/70">Email<input required type="email" name="email" value={form.email} onChange={update} className={fieldClass} placeholder="correo@empresa.com" /></label>
       <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-charcoal/70">Teléfono<input required type="tel" name="telefono" value={form.telefono} onChange={update} className={fieldClass} placeholder="Tu teléfono" /></label>
       <label className="grid gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-charcoal/70">Ciudad<input name="ciudad" value={form.ciudad} onChange={update} className={fieldClass} placeholder="Ciudad del proyecto" /></label>
@@ -103,6 +127,8 @@ export default function QuoteForm({ compact = false }) {
           )}
         </button>
       </div>
-    </form>
-  );
-}
+</form>
+    );
+  });
+
+export default QuoteForm;
