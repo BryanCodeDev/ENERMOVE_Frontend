@@ -10,8 +10,8 @@ export default function NotFoundContent() {
         <h1 className="mt-5 font-display text-4xl font-bold leading-tight text-brand-ink sm:text-5xl">Esta ruta aún no está conectada.</h1>
         <p className="mx-auto mt-6 max-w-md text-base leading-8 text-brand-charcoal/65">La página que buscas no existe o fue movida. Regresa al inicio y continúa explorando las soluciones de ENERMOVE.</p>
         <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-          <Link to="/" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark">Volver al inicio <ArrowRight className="h-4 w-4" /></Link>
-          <Link to="/contacto" className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-line px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">Contactar</Link>
+          <Link to="/" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark">Volver a ENERMOVE <ArrowRight className="h-4 w-4" /></Link>
+          <Link to="/contacto" className="inline-flex items-center justify-center gap-2 rounded-full border border-brand-line px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">Solicitar ayuda</Link>
         </div>
       </Reveal>
     </section>

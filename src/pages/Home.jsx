@@ -14,8 +14,8 @@ import { useSeo, organizationSchema, webSiteSchema, localBusinessSchema } from '
 
 export default function Home() {
   useSeo({
-    title: 'ENERMOVE | Energía que conecta tu hogar',
-    description: 'Soluciones de movilidad eléctrica, carga EV y energía limpia para hogares y empresas en Colombia.',
+    title: 'Cargadores para carros eléctricos en Bogotá | ENERMOVE',
+    description: 'Cargadores para vehículos eléctricos e híbridos en casa y empresa, con integración solar. Solicita tu cotización en Bogotá y Colombia.',
   });
 
   return (

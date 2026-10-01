@@ -39,7 +39,7 @@ export default function SolarSection() {
             </div>
             <p className="mt-6 flex items-start gap-2.5 text-xs leading-6 text-white/55"><Check className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />La integración de instalaciones y servicios está sujeta a confirmación según el proyecto.</p>
             <Link to="/contacto" className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:w-auto sm:justify-start">
-              Conocer la solución
+              Cotizar energía solar + EV
               <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>

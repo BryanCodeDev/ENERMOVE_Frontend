@@ -28,7 +28,7 @@ export default function ProcessSection() {
         </div>
         <div className="mt-10 text-center">
           <Link to="/contacto" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-blue shadow-soft transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark hover:text-white sm:w-auto">
-            Hablemos de tu proyecto
+            Iniciar mi proyecto
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

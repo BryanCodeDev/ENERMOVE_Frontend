@@ -29,7 +29,7 @@ export default function ResidentialSection() {
           <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Carga tu vehículo donde comienza tu día.</h2>
           <p className="mt-6 max-w-lg text-base leading-8 text-brand-charcoal/65">Una solución de carga en casa convierte la movilidad eléctrica en parte natural de tu rutina. Pensamos en la comodidad de hoy y en la integración futura con energía solar.</p>
           <Link to="/contacto" className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark">
-            Quiero conocer la solución
+            Cotizar cargador residencial
             <ArrowRight className="h-4 w-4" />
           </Link>
         </motion.div>

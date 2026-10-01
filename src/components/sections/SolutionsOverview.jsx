@@ -14,7 +14,7 @@ export default function SolutionsOverview() {
             <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Soluciones para cada necesidad.</h2>
           </div>
           <Link to="/soluciones" className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-brand-blue transition-colors hover:text-brand-blue">
-            Explorar todas
+            Ver todas las soluciones de carga EV
             <ArrowRight className="h-4 w-4 transition-transform hover:translate-x-1" />
           </Link>
         </div>

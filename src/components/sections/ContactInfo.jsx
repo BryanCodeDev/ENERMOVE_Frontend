@@ -43,7 +43,7 @@ export default function ContactInfo() {
               ))}
             </ul>
             <Link to="/contacto" className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark">
-              Ir al formulario
+              Cotizar ahora
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>

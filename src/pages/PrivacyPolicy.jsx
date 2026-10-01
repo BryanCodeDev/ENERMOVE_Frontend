@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
               <ShieldCheck className="h-7 w-7 text-brand-blue" />
               <h2 className="mt-5 font-display text-2xl font-semibold">¿Tiene dudas sobre sus datos?</h2>
               <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Escríbanos a <a href="mailto:contacto@enermove.com" className="text-brand-blue underline">contacto@enermove.com</a> o contáctenos por WhatsApp.</p>
-              <Link to="/" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Volver al inicio</Link>
+              <Link to="/" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Volver a ENERMOVE</Link>
             </div>
           </Reveal>
         </div>

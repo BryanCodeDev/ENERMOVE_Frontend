@@ -33,7 +33,7 @@ export default function AboutValues() {
             <blockquote className="relative mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl">{company.purpose}</blockquote>
             <p className="relative mt-7 text-sm leading-7 text-white/60">Conectamos la movilidad del futuro con la energía del presente.</p>
             <Link to="/contacto" className="relative mt-10 inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-3 text-sm font-semibold transition-all hover:border-brand-blue hover:bg-brand-blue">
-              Hablemos
+              Cotizar mi proyecto
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Reveal>
