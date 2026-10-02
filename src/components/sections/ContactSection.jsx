@@ -9,8 +9,8 @@ import { memo } from 'react';
 const whatsappHref = getWhatsAppUrl();
 const details = [
   { icon: Mail, label: 'Email', value: contactConfig.email, href: `mailto:${contactConfig.email}` },
-  { icon: Phone, label: 'Teléfono', value: contactConfig.phone, href: `tel:${contactConfig.phone}` },
-  { icon: MapPin, label: 'Ubicación', value: `${contactConfig.city} · ${contactConfig.address}` },
+  { icon: Phone, label: 'Teléfono', value: contactConfig.phone, href: `tel:${contactConfig.phoneLink}` },
+  { icon: MapPin, label: 'Cobertura', value: contactConfig.coverage },
   { icon: WhatsAppIcon, label: 'WhatsApp', value: whatsappHref === '#' ? 'Pendiente de configuración' : contactConfig.phone, href: whatsappHref === '#' ? null : whatsappHref },
 ];
 

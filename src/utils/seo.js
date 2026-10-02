@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
+import { contactConfig } from '../config/contact';
 
 const siteUrl = 'https://enermove.example';
+
+const phoneSchema = contactConfig.phoneLink;
 
 const setMeta = (name, content, property = 'name') => {
   if (!content) return;
@@ -59,11 +62,11 @@ export const organizationSchema = {
   description: seoDefaults.description,
   areaServed: { '@type': 'Country', name: 'Colombia' },
   sameAs: [
-    'https://wa.me/573000000000',
+    `https://wa.me/${contactConfig.whatsappNumber}`,
   ],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+57-300-000-0000',
+    telephone: phoneSchema,
     contactType: 'customer service',
     availableLanguage: ['Spanish'],
     areaServed: 'CO',
@@ -98,9 +101,9 @@ export const localBusinessSchema = {
     '@type': 'PostalAddress',
     addressCountry: 'CO',
     addressLocality: 'Bogotá',
-    addressRegion: 'Cundinamarca',
+    addressRegion: 'Bogotá D.C.',
   },
-  telephone: '+57-300-000-0000',
+  telephone: phoneSchema,
   priceRange: '$$',
   currenciesAccepted: 'COP',
   paymentAccepted: 'Cash, Credit Card, Transfer',

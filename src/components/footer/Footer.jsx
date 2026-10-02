@@ -93,11 +93,11 @@ export default function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
-                <a className="hover:text-white" href={`tel:${contactConfig.phone}`}>{contactConfig.phone}</a>
+                <a className="hover:text-white" href={`tel:${contactConfig.phoneLink}`}>{contactConfig.phone}</a>
               </li>
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />
-                <span>{contactConfig.city} {contactConfig.address && `· ${contactConfig.address}`}</span>
+                <span>{contactConfig.coverage}</span>
               </li>
               <li className="flex gap-3">
                 <WhatsAppIcon className="mt-0.5 h-4 w-4 shrink-0 text-brand-blue" />

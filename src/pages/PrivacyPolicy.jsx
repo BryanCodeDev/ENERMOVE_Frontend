@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
             <div className="mt-10 space-y-8 text-base leading-8 text-brand-charcoal/75">
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">1. Responsable del tratamiento</h2>
-                <p>ENERMOVE S.A.S., identificada con NIT 900.XXX.XXX-X, con domicilio principal en Carrera 7 # 71-52, Oficina 501, Bogotá, Cundinamarca, Colombia. Correo: contacto@enermove.com | Tel: +57 301 481 5460.</p>
+                <p>ENERMOVE S.A.S., identificada con NIT 900.XXX.XXX-X, con domicilio principal en Bogotá, D.C., Colombia, y cobertura en todo el territorio nacional. Correo: contacto@enermove.com | Tel: +57 304 313 8069.</p>
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">2. Datos recolectados</h2>

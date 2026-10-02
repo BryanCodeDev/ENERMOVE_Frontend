@@ -31,7 +31,7 @@ export default function DataTreatment() {
             <div className="mt-10 space-y-8 text-base leading-8 text-brand-charcoal/75">
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">1. Responsable</h2>
-                <p>ENERMOVE S.A.S., NIT 900.XXX.XXX-X, Carrera 7 # 71-52, Of. 501, Bogotá, Cundinamarca. contacto@enermove.com | +57 301 481 5460.</p>
+                <p>ENERMOVE S.A.S., NIT 900.XXX.XXX-X, con domicilio principal en Bogotá, D.C., Colombia, y cobertura en todo el territorio nacional. contacto@enermove.com | +57 304 313 8069.</p>
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">2. Tipos de datos y fuentes</h2>

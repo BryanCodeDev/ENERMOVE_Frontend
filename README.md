@@ -56,7 +56,7 @@ Los contenidos temporales están separados en `src/data`. Las referencias de im�
 
 ## Configuración
 
-- El número de WhatsApp y los datos de contacto se configuran en `src/config/contact.js`.
+- El número de WhatsApp y los datos de contacto se configuran en `src/config/contact.js` (ENERMOVE no tiene local físico: se informa cobertura nacional, no dirección).
 - El formulario de cotización envía los datos a `POST /api/leads`, que es una Netlify Function connected a Resend. Al enviar correctamente redirige a WhatsApp con el resumen del formulario.
 - Los textos corporativos pendientes están marcados con `[REEMPLAZAR ...]`.
 - Las URLs de imágenes son referencias temporales de alta calidad y deben reemplazarse por los archivos definitivos.
@@ -103,10 +103,20 @@ Configura las variables de entorno en **Netlify → Site configuration → Envir
 | Variable | Valor | Notas |
 | --- | --- | --- |
 | `RESEND_API_KEY` | `re_...` | Se obtiene en resend.com → API Keys. Es la única obligatoria. |
-| `LEADS_RECIPIENT` | `mastercodecompany@gmail.com` | Destinatario de las solicitudes. |
+| `LEADS_RECIPIENT` | `enermovesas@gmail.com` | Destinatario de las solicitudes. |
 | `RESEND_FROM` | `onboarding@resend.dev` | Remitente. Ver nota de abajo. |
 
-Importante sobre el remitente: mientras no verifiques un dominio propio en Resend, el único remitente permitido es `onboarding@resend.dev`, y a su vez Resend solo permite enviar a **el mismo correo con el que creaste la cuenta**. Por eso la cuenta de Resend debe registrarse con `mastercodecompany@gmail.com`. Más adelante, al verificar un dominio (por ejemplo `enermove.co`), cambia `RESEND_FROM` a `Notificaciones <notificaciones@enermove.co>`.
+Importante sobre el remitente: mientras no verifiques un dominio propio en Resend, el único remitente permitido es `onboarding@resend.dev`, y a su vez Resend solo permite enviar a **el mismo correo con el que creaste la cuenta**. Por eso la cuenta de Resend debe estar registrada con `enermovesas@gmail.com`. Más adelante, al verificar un dominio (por ejemplo `enermove.co`), cambia `RESEND_FROM` a `Notificaciones <notificaciones@enermove.co>`.
 
 Después de añadir las variables, redeploya el sitio (Netlify no inyecta variables en despliegues ya existentes).
+
+### Probar el formulario en local
+
+`vite.config.js` monta la misma Netlify Function en `/api/leads` durante `npm run dev`, así que el formulario se puede probar sin desplegar:
+
+1. Copia `.env.example` a `.env` y completa `RESEND_API_KEY` (el archivo `.env` está en `.gitignore`).
+2. Levanta el sitio con `npm run dev`.
+3. Envía el formulario desde `http://localhost:5173/contacto`: el correo llega a `LEADS_RECIPIENT` y el navegador redirige a WhatsApp.
+
+En producción el endpoint lo resuelve el redirect de `netlify.toml` hacia `/.netlify/functions/leads`.
 

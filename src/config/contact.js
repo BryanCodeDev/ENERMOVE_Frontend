@@ -1,11 +1,12 @@
 export const contactConfig = {
   tagline: 'Energía que conecta tu hogar',
-  whatsappNumber: '573014815460',
+  whatsappNumber: '573043138069',
   whatsappMessage: 'Hola, estoy interesado en conocer las soluciones de EnerMove.',
   email: 'contacto@enermove.com',
-  phone: '+57 301 481 5460',
+  phone: '+57 304 313 8069',
+  phoneLink: '+573043138069',
   city: 'Bogotá',
-  address: 'Carrera 7 # 71-52, Oficina 501, Bogotá, Cundinamarca',
+  coverage: 'Cobertura en todo Colombia',
   social: {
     instagram: 'https://instagram.com/enermove',
     linkedin: 'https://linkedin.com/company/enermove',

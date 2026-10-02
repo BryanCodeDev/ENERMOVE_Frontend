@@ -8,8 +8,8 @@ export default function ContactInfo() {
   const whatsappHref = getWhatsAppUrl();
   const items = [
     [Mail, 'Email', contactConfig.email, `mailto:${contactConfig.email}`],
-    [Phone, 'Teléfono', contactConfig.phone, `tel:${contactConfig.phone}`],
-    [MapPin, 'Ubicación', `${contactConfig.city} · ${contactConfig.address}`, null],
+    [Phone, 'Teléfono', contactConfig.phone, `tel:${contactConfig.phoneLink}`],
+    [MapPin, 'Cobertura', contactConfig.coverage, null],
     [WhatsAppIcon, 'WhatsApp', whatsappHref === '#' ? 'Pendiente de configuración' : contactConfig.phone, whatsappHref === '#' ? null : whatsappHref],
   ];
 
