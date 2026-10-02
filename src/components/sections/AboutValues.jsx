@@ -27,7 +27,7 @@ export default function AboutValues() {
               ))}
             </div>
           </Reveal>
-          <Reveal delay={0.12} className="relative min-h-[420px] overflow-hidden rounded-[2rem] bg-brand-ink p-8 text-white sm:p-10">
+          <Reveal delay={0.12} className="relative overflow-hidden rounded-[2rem] bg-brand-ink p-8 text-white sm:p-10 sm:min-h-[420px]">
             <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-blue/20 blur-3xl" />
             <p className="relative font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Propósito</p>
             <blockquote className="relative mt-8 font-display text-3xl font-semibold leading-tight sm:text-4xl">{company.purpose}</blockquote>
