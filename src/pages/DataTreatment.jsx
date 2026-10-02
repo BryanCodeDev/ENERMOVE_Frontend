@@ -31,7 +31,7 @@ export default function DataTreatment() {
             <div className="mt-10 space-y-8 text-base leading-8 text-brand-charcoal/75">
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">1. Responsable</h2>
-                <p>ENERMOVE S.A.S., NIT 900.XXX.XXX-X, con domicilio principal en Bogotá, D.C., Colombia, y cobertura en todo el territorio nacional. contacto@enermove.com | +57 304 313 8069.</p>
+                <p>ENERMOVE S.A.S., NIT 900.XXX.XXX-X, con domicilio principal en Bogotá, D.C., Colombia, y cobertura en todo el territorio nacional. enermovesas@gmail.com | +57 304 313 8069.</p>
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">2. Tipos de datos y fuentes</h2>
@@ -63,7 +63,7 @@ export default function DataTreatment() {
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">5. Derechos ARCO + Portabilidad</h2>
-                <p>Acceso, Rectificación, Cancelación, Oposición y Portabilidad. Procedimiento: solicitud escrita a contacto@enermove.com con asunto "Derechos ARCO", adjuntando copia de documento de identidad. Respuesta en 10 días hábiles (prorrogables 5 más).</p>
+                <p>Acceso, Rectificación, Cancelación, Oposición y Portabilidad. Procedimiento: solicitud escrita a enermovesas@gmail.com con asunto "Derechos ARCO", adjuntando copia de documento de identidad. Respuesta en 10 días hábiles (prorrogables 5 más).</p>
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">6. Encargados y transferencias</h2>
@@ -84,13 +84,13 @@ export default function DataTreatment() {
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">9. Contacto DPO / Área de datos</h2>
-                <p>EnerMove no tiene DPO obligatorio; el responsable del tratamiento atiende consultas: <a href="mailto:contacto@enermove.com" className="text-brand-blue underline">contacto@enermove.com</a> | Asunto: "Protección de datos".</p>
+                <p>EnerMove no tiene DPO obligatorio; el responsable del tratamiento atiende consultas: <a href="mailto:enermovesas@gmail.com" className="text-brand-blue underline">enermovesas@gmail.com</a> | Asunto: "Protección de datos".</p>
               </section>
             </div>
             <div className="mt-10 rounded-2xl border border-brand-line bg-white p-8">
               <FileCheck2 className="h-7 w-7 text-brand-blue" />
               <h2 className="mt-5 font-display text-2xl font-semibold">¿Necesita ejercer sus derechos?</h2>
-              <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Envíe su solicitud a <a href="mailto:contacto@enermove.com" className="text-brand-blue underline">contacto@enermove.com</a> con asunto "Derechos ARCO".</p>
+              <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Envíe su solicitud a <a href="mailto:enermovesas@gmail.com" className="text-brand-blue underline">enermovesas@gmail.com</a> con asunto "Derechos ARCO".</p>
               <Link to="/contacto" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Solicitar información</Link>
             </div>
           </Reveal>

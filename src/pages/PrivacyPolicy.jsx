@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
             <div className="mt-10 space-y-8 text-base leading-8 text-brand-charcoal/75">
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">1. Responsable del tratamiento</h2>
-                <p>ENERMOVE S.A.S., identificada con NIT 900.XXX.XXX-X, con domicilio principal en Bogotá, D.C., Colombia, y cobertura en todo el territorio nacional. Correo: contacto@enermove.com | Tel: +57 304 313 8069.</p>
+                <p>ENERMOVE S.A.S., identificada con NIT 900.XXX.XXX-X, con domicilio principal en Bogotá, D.C., Colombia, y cobertura en todo el territorio nacional. Correo: enermovesas@gmail.com | Tel: +57 304 313 8069.</p>
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">2. Datos recolectados</h2>
@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">4. Derechos del titular</h2>
-                <p>Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales, revocar la autorización y presentar quejas ante la Superintendencia de Industria y Comercio. Para ejercer sus derechos, escríbanos a contacto@enermove.com con el asunto "Derechos ARCO".</p>
+                <p>Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales, revocar la autorización y presentar quejas ante la Superintendencia de Industria y Comercio. Para ejercer sus derechos, escríbanos a enermovesas@gmail.com con el asunto "Derechos ARCO".</p>
               </section>
               <section>
                 <h2 className="font-display text-xl font-semibold text-brand-ink">5. Seguridad y conservación</h2>
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
             <div className="mt-10 rounded-2xl border border-brand-line bg-white p-8">
               <ShieldCheck className="h-7 w-7 text-brand-blue" />
               <h2 className="mt-5 font-display text-2xl font-semibold">¿Tiene dudas sobre sus datos?</h2>
-              <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Escríbanos a <a href="mailto:contacto@enermove.com" className="text-brand-blue underline">contacto@enermove.com</a> o contáctenos por WhatsApp.</p>
+              <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Escríbanos a <a href="mailto:enermovesas@gmail.com" className="text-brand-blue underline">enermovesas@gmail.com</a> o contáctenos por WhatsApp.</p>
               <Link to="/" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Volver a ENERMOVE</Link>
             </div>
           </Reveal>

@@ -2,7 +2,7 @@ export const contactConfig = {
   tagline: 'Energía que conecta tu hogar',
   whatsappNumber: '573043138069',
   whatsappMessage: 'Hola, estoy interesado en conocer las soluciones de EnerMove.',
-  email: 'contacto@enermove.com',
+  email: 'enermovesas@gmail.com',
   phone: '+57 304 313 8069',
   phoneLink: '+573043138069',
   city: 'Bogotá',
