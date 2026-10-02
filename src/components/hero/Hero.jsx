@@ -9,7 +9,7 @@ export default function Hero() {
   const contentY = useTransform(scrollY, [0, 350], [0, -24]);
 
   return (
-    <section className="home-hero relative flex min-h-[88svh] sm:min-h-[90svh] items-end overflow-hidden bg-brand-ink text-white overscroll-contain">
+    <section className="home-hero relative flex min-h-[88svh] sm:min-h-[90svh] items-end overflow-hidden bg-brand-ink text-white">
       <motion.div style={{ y: imageY }} className="absolute inset-0">
         <img src={images.hero} alt={images.heroAlt} className="h-full w-full object-cover" fetchpriority="high" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/70 to-brand-ink/20" />
