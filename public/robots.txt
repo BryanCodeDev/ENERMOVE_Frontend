@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://enermove.example/sitemap.xml
+Sitemap: https://enermove.netlify.app/sitemap.xml
 
 # Disallow admin/private paths
 Disallow: /admin/
@@ -21,4 +21,4 @@ Disallow: /cuenta/
 Crawl-delay: 10
 
 # Host
-Host: https://enermove.example
+Host: https://enermove.netlify.app

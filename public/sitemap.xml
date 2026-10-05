@@ -2,99 +2,99 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://enermove.example/</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/" />
+    <loc>https://enermove.netlify.app/</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/" />
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/nosotros</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/nosotros" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/nosotros" />
+    <loc>https://enermove.netlify.app/nosotros</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/nosotros" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/nosotros" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/soluciones</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/soluciones" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/soluciones" />
+    <loc>https://enermove.netlify.app/soluciones</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/soluciones" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/soluciones" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/servicios</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/servicios" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/servicios" />
+    <loc>https://enermove.netlify.app/servicios</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/servicios" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/servicios" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/catalogo</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo" />
+    <loc>https://enermove.netlify.app/catalogo</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/catalogo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/catalogo" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/catalogo/carga-residencial</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo/carga-residencial" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo/carga-residencial" />
+    <loc>https://enermove.netlify.app/catalogo/carga-residencial</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/catalogo/carga-residencial" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/catalogo/carga-residencial" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/catalogo/carga-empresarial</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo/carga-empresarial" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo/carga-empresarial" />
+    <loc>https://enermove.netlify.app/catalogo/carga-empresarial</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/catalogo/carga-empresarial" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/catalogo/carga-empresarial" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/catalogo/cargadores-portatiles</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/catalogo/cargadores-portatiles" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/catalogo/cargadores-portatiles" />
+    <loc>https://enermove.netlify.app/catalogo/cargadores-portatiles</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/catalogo/cargadores-portatiles" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/catalogo/cargadores-portatiles" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/contacto</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/contacto" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/contacto" />
+    <loc>https://enermove.netlify.app/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/contacto" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/contacto" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/compatibilidad</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/compatibilidad" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/compatibilidad" />
+    <loc>https://enermove.netlify.app/compatibilidad</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/compatibilidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/compatibilidad" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/politica-de-privacidad</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/politica-de-privacidad" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/politica-de-privacidad" />
+    <loc>https://enermove.netlify.app/politica-de-privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/politica-de-privacidad" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/politica-de-privacidad" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
-    <loc>https://enermove.example/tratamiento-de-datos</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.example/tratamiento-de-datos" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.example/tratamiento-de-datos" />
+    <loc>https://enermove.netlify.app/tratamiento-de-datos</loc>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="https://enermove.netlify.app/tratamiento-de-datos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enermove.netlify.app/tratamiento-de-datos" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
   </url>
 </urlset>

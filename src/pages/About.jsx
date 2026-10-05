@@ -22,7 +22,7 @@ export default function About() {
   useSeo({
     title: 'Empresa de cargadores EV y energía solar en Colombia | ENERMOVE',
     description: 'ENERMOVE S.A.S., empresa colombiana con sede en Bogotá. Ingeniería, importación, instalación y consultoría en movilidad eléctrica e integración solar. Fundador: Ing. Mecánico, Especialista PMI, 15+ años en sector energético.',
-    canonical: 'https://enermove.example/nosotros',
+    canonical: 'https://enermove.netlify.app/nosotros',
   });
 
   return (

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { contactConfig } from '../config/contact';
 
-const siteUrl = 'https://enermove.example';
+const siteUrl = 'https://enermove.netlify.app';
 
 const phoneSchema = contactConfig.phoneLink;
 

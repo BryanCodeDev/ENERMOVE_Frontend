@@ -9,13 +9,13 @@ export default function PrivacyPolicy() {
   useSeo({
     title: 'Política de privacidad | ENERMOVE',
     description: 'Política de privacidad y protección de datos personales de ENERMOVE S.A.S. conforme a la Ley 1581 de 2012 y Decreto 1377 de 2013.',
-    canonical: 'https://enermove.example/politica-de-privacidad',
+    canonical: 'https://enermove.netlify.app/politica-de-privacidad',
     noIndex: true,
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.example/' },
-    { name: 'Política de privacidad', url: 'https://enermove.example/politica-de-privacidad' },
+    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
+    { name: 'Política de privacidad', url: 'https://enermove.netlify.app/politica-de-privacidad' },
   ]);
 
   return (

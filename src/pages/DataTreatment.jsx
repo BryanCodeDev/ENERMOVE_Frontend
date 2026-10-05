@@ -9,13 +9,13 @@ export default function DataTreatment() {
   useSeo({
     title: 'Tratamiento de datos personales | ENERMOVE',
     description: 'Procedimientos y políticas para el tratamiento de datos personales en ENERMOVE S.A.S. conforme a la Ley 1581 de 2012 y Decreto 1377 de 2013.',
-    canonical: 'https://enermove.example/tratamiento-de-datos',
+    canonical: 'https://enermove.netlify.app/tratamiento-de-datos',
     noIndex: true,
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.example/' },
-    { name: 'Tratamiento de datos', url: 'https://enermove.example/tratamiento-de-datos' },
+    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
+    { name: 'Tratamiento de datos', url: 'https://enermove.netlify.app/tratamiento-de-datos' },
   ]);
 
   return (

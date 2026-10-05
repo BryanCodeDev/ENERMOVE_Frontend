@@ -17,7 +17,7 @@ export default function ProductDetail() {
     return <NotFoundContent />;
   }
 
-  const canonical = `https://enermove.example/producto/${product.slug}`;
+  const canonical = `https://enermove.netlify.app/producto/${product.slug}`;
   useSeo({
     title: `${product.name} | ENERMOVE`,
     description: product.description,
@@ -26,9 +26,9 @@ export default function ProductDetail() {
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.example/' },
-    { name: 'Catálogo', url: 'https://enermove.example/catalogo' },
-    { name: product.categoryName, url: `https://enermove.example/catalogo/${product.category}` },
+    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
+    { name: 'Catálogo', url: 'https://enermove.netlify.app/catalogo' },
+    { name: product.categoryName, url: `https://enermove.netlify.app/catalogo/${product.category}` },
     { name: product.name, url: canonical },
   ]);
 
