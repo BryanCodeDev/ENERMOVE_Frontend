@@ -39,11 +39,11 @@ export default function Navbar() {
   return (
     <motion.header
       style={{ y: navY }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-soft backdrop-blur-xl' : 'bg-transparent'}`}
+      className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-soft backdrop-blur-xl' : 'bg-transparent'}`}
     >
-      <div className="mx-auto flex h-16 max-w-page items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-16 w-full max-w-page items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-12">
         <Link to="/" className="group inline-flex items-center gap-2.5" aria-label="ENERMOVE inicio">
-          <img src={logo} alt="ENERMOVE logo" className="h-9 w-9 rounded-xl object-cover shadow-lift transition-transform group-hover:scale-105 sm:h-10 sm:w-10" />
+          <img src={logo} alt="ENERMOVE logo" className="h-9 w-9 shrink-0 rounded-xl object-cover shadow-lift transition-transform group-hover:scale-105 sm:h-10 sm:w-10" />
           <span className={`font-display text-base font-bold tracking-wide sm:text-lg sm:text-xl ${scrolled || open ? 'text-brand-ink' : headerTextClass}`}>ENERMOVE</span>
         </Link>
 
@@ -51,7 +51,7 @@ export default function Navbar() {
           {links.map((link) => (
             <NavLink
               key={link.to}
-              className={({ isActive }) => `relative text-sm font-medium transition-colors ${isActive ? 'text-brand-blue' : inactiveLinkClass}`}
+              className={({ isActive }) => `relative whitespace-nowrap text-sm font-medium transition-colors ${isActive ? 'text-brand-blue' : inactiveLinkClass}`}
               to={link.to}
             >
               {({ isActive }) => (
@@ -62,7 +62,7 @@ export default function Navbar() {
               )}
             </NavLink>
           ))}
-          <Link to="/contacto" className="ml-1 inline-flex items-center gap-2 rounded-full bg-brand-blue px-4 py-2.5 text-xs font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:px-5 sm:text-sm">
+          <Link to="/contacto" className="ml-1 inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-blue px-4 py-2.5 text-xs font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:px-5 sm:text-sm">
             Solicitar cotización
             <ArrowRight className="h-4 w-4" />
           </Link>
@@ -83,14 +83,14 @@ export default function Navbar() {
         initial={false}
         animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
         transition={{ duration: 0.35, ease: 'easeInOut' }}
-        className="overflow-hidden bg-white/95 backdrop-blur-xl lg:hidden"
+        className="w-full overflow-hidden bg-white/95 backdrop-blur-xl lg:hidden"
       >
-        <nav className="mx-auto max-w-page px-5 pb-7 pt-2 sm:px-8" aria-label="Navegación móvil">
+        <nav className="mx-auto w-full max-w-page px-5 pb-7 pt-2 sm:px-8" aria-label="Navegación móvil">
           <div className="flex flex-col divide-y divide-brand-line">
             {links.map((link, index) => (
               <NavLink
                 key={link.to}
-                className={({ isActive }) => `flex items-center justify-between py-4 text-base font-medium ${isActive ? 'text-brand-blue' : 'text-brand-charcoal/80'}`}
+                className={({ isActive }) => `flex items-center justify-between py-4 whitespace-normal text-base font-medium ${isActive ? 'text-brand-blue' : 'text-brand-charcoal/80'}`}
                 to={link.to}
               >
                 <span>{link.label}</span>
@@ -98,7 +98,7 @@ export default function Navbar() {
               </NavLink>
             ))}
           </div>
-          <Link to="/contacto" className="mt-6 flex items-center justify-center gap-2 rounded-full bg-brand-blue px-5 py-3.5 text-sm font-semibold text-white shadow-lift" >
+          <Link to="/contacto" className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-5 py-3.5 text-sm font-semibold text-white shadow-lift" >
             Solicitar cotización
             <ArrowRight className="h-4 w-4" />
           </Link>
