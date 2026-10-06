@@ -62,7 +62,7 @@ const VehicleChargerSection = memo(function VehicleChargerSection() {
           description="Consulta la referencia de tu carro y te orientamos hacia el conector compatible."
         />
 
-        <Reveal delay={0.1} className="mt-10 overflow-x-hidden">
+         <Reveal delay={0.1} className="mt-10">
           <p className="text-center font-display text-sm font-semibold text-brand-charcoal/60">
             Pasa el cursor por tu marca para ver el conector
           </p>

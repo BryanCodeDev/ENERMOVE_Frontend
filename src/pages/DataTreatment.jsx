@@ -1,9 +1,10 @@
-import { ArrowRight, FileCheck2 } from 'lucide-react';
+import { FileCheck2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Reveal from '../components/ui/Reveal';
 import JsonLd from '../components/ui/JsonLd';
 import { useSeo, breadcrumbSchema } from '../utils/seo';
+import ButtonLink from '../components/buttons/ButtonLink';
 
 export default function DataTreatment() {
   useSeo({
@@ -91,7 +92,7 @@ export default function DataTreatment() {
               <FileCheck2 className="h-7 w-7 text-brand-blue" />
               <h2 className="mt-5 font-display text-2xl font-semibold">¿Necesita ejercer sus derechos?</h2>
               <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Envíe su solicitud a <a href="mailto:enermovesas@gmail.com" className="text-brand-blue underline">enermovesas@gmail.com</a> con asunto "Derechos ARCO".</p>
-              <Link to="/contacto" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Solicitar información</Link>
+              <ButtonLink to="/contacto" variant="primary">Solicitar información</ButtonLink>
             </div>
           </Reveal>
         </div>

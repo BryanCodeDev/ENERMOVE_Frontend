@@ -1,13 +1,13 @@
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { company } from '../../data/company';
 import { images } from '../../data/images';
 import Reveal from '../ui/Reveal';
+import SectionHeading from '../ui/SectionHeading';
+import ButtonLink from '../buttons/ButtonLink';
 
 export default function AboutPreview() {
   return (
     <section id="conoce-enermove" className="bg-brand-sand px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-page overflow-x-hidden">
+      <div className="mx-auto max-w-page">
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <Reveal>
             <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">
@@ -20,13 +20,9 @@ export default function AboutPreview() {
             </div>
           </Reveal>
           <Reveal delay={0.12}>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Nosotros</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-brand-ink sm:text-5xl lg:text-6xl">Estamos construyendo una nueva forma de movernos.</h2>
+            <SectionHeading eyebrow="Nosotros" title="Estamos construyendo una nueva forma de movernos." />
             <p className="mt-6 max-w-xl text-base leading-8 text-brand-charcoal/65">{company.description}</p>
-            <Link to="/nosotros" className="mt-8 inline-flex items-center gap-2 rounded-full border border-brand-line px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">
-              Conoce nuestra visión
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <ButtonLink to="/nosotros" variant="secondary">Conoce nuestra visión</ButtonLink>
           </Reveal>
         </div>
       </div>

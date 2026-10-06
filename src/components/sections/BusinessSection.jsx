@@ -2,6 +2,8 @@ import { ArrowRight, Building2, MapPin, Trees } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { images } from '../../data/images';
+import SectionHeading from '../ui/SectionHeading';
+import ButtonLink from '../buttons/ButtonLink';
 
 const cases = [
   { icon: Building2, title: 'Empresas' },
@@ -15,8 +17,7 @@ export default function BusinessSection() {
       <div className="mx-auto max-w-page">
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <motion.div initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Soluciones empresariales</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Infraestructura para la movilidad del futuro.</h2>
+            <SectionHeading eyebrow="Soluciones empresariales" title="Infraestructura para la movilidad del futuro." />
             <p className="mt-6 max-w-lg text-base leading-8 text-white/65">Analizamos el contexto de tu proyecto para proponer una solución de carga coherente con los usos, las personas y la proyección del espacio.</p>
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {cases.map(({ icon: Icon, title }) => (
@@ -26,10 +27,7 @@ export default function BusinessSection() {
                 </div>
               ))}
             </div>
-            <Link to="/contacto" className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">
-              Solicitar asesoría
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <ButtonLink to="/contacto" variant="outlineLight" className="mt-8">Solicitar asesoría</ButtonLink>
           </motion.div>
           <motion.div className="relative" initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
             <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">

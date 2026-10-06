@@ -4,6 +4,7 @@ import WhatsAppIcon from '../icons/WhatsAppIcon';
 import { contactConfig, getWhatsAppUrl } from '../../config/contact';
 import QuoteForm from '../forms/QuoteForm';
 import Reveal from '../ui/Reveal';
+import SectionHeading from '../ui/SectionHeading';
 import { memo } from 'react';
 
 const whatsappHref = getWhatsAppUrl();
@@ -17,11 +18,10 @@ const details = [
 const ContactSection = memo(function ContactSection() {
   return (
     <section id="contacto" className="bg-brand-sand px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-page overflow-x-hidden">
+      <div className="mx-auto max-w-page">
         <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <Reveal>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Contacto</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-brand-ink sm:text-5xl lg:text-6xl">Conversemos sobre tu proyecto.</h2>
+            <SectionHeading eyebrow="Contacto" title="Conversemos sobre tu proyecto." />
             <div className="mt-8 space-y-5">
               {details.map(({ icon: Icon, label, value, href }) => (
                 <div key={label} className="flex items-center gap-4">
@@ -37,7 +37,7 @@ const ContactSection = memo(function ContactSection() {
           <Reveal delay={0.12} className="rounded-2xl border border-brand-line bg-white p-6 shadow-soft sm:p-8 lg:p-10">
             <div className="mb-8">
               <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Solicitud</p>
-              <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">Cuéntanos qué tienes en mente.</h3>
+              <h3 className="mt-3 font-display text-xl font-semibold leading-tight sm:text-2xl">Cuéntanos qué tienes en mente.</h3>
             </div>
             <QuoteForm compact />
           </Reveal>

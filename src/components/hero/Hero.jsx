@@ -1,7 +1,8 @@
-import { ArrowDown, ArrowRight, Bolt, Home, Leaf } from 'lucide-react';
+import { ArrowDown, Bolt, Home, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { images } from '../../data/images';
+import ButtonLink from '../buttons/ButtonLink';
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -40,10 +41,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.46, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Link to="/soluciones" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:w-auto sm:justify-start">
-              Conoce nuestras soluciones
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+             <ButtonLink to="/soluciones" variant="primary" className="w-full sm:w-auto sm:justify-start">Conoce nuestras soluciones</ButtonLink>
           </motion.div>
         </motion.div>
         <motion.div

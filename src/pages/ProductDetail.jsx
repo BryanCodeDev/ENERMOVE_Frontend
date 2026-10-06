@@ -8,6 +8,7 @@ import QuoteForm from '../components/forms/QuoteForm';
 import JsonLd from '../components/ui/JsonLd';
 import NotFoundContent from '../components/sections/NotFoundContent';
 import { productSchema, useSeo, breadcrumbSchema } from '../utils/seo';
+import ButtonLink from '../components/buttons/ButtonLink';
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -60,7 +61,7 @@ export default function ProductDetail() {
               </div>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a href="#cotizar" className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark">Consultar <ArrowRight className="h-4 w-4" /></a>
-                <Link to="/catalogo" className="inline-flex items-center justify-center rounded-full border border-brand-line px-6 py-3.5 text-sm font-semibold text-brand-ink transition-all hover:border-brand-blue hover:bg-brand-blue hover:text-white">Volver al catálogo</Link>
+                <ButtonLink to="/catalogo" variant="secondary">Volver al catálogo</ButtonLink>
               </div>
               <div className="mt-8 flex flex-wrap gap-2">
                 {product.price ? <span className="rounded-full bg-brand-blue/10 px-3 py-1.5 text-[11px] font-medium text-brand-blueDark">{product.price}</span> : <span className="rounded-full bg-brand-blue/10 px-3 py-1.5 text-[11px] font-medium text-brand-blueDark">Cotizar precio</span>}
@@ -82,19 +83,19 @@ export default function ProductDetail() {
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-brand-line bg-brand-sand p-6">
                 <BatteryCharging className="h-6 w-6 text-brand-blue" />
-                <h3 className="mt-5 font-display text-lg font-semibold">Aplicaciones</h3>
-                <ul className="mt-4 space-y-2 text-sm text-brand-charcoal/65">{product.applications.map((item) => <li key={item} className="flex gap-2"><span className="h-1.5 w-1.5 mt-2 rounded-full bg-brand-blue" />{item}</li>)}</ul>
-              </div>
-              <div className="rounded-2xl border border-brand-line bg-brand-sand p-6">
-                <ShieldCheck className="h-6 w-6 text-brand-blue" />
-                <h3 className="mt-5 font-display text-lg font-semibold">Beneficios</h3>
+                 <h3 className="mt-5 font-display text-xl font-semibold">Aplicaciones</h3>
+                 <ul className="mt-4 space-y-2 text-sm text-brand-charcoal/65">{product.applications.map((item) => <li key={item} className="flex gap-2"><span className="h-1.5 w-1.5 mt-2 rounded-full bg-brand-blue" />{item}</li>)}</ul>
+               </div>
+               <div className="rounded-2xl border border-brand-line bg-brand-sand p-6">
+                 <ShieldCheck className="h-6 w-6 text-brand-blue" />
+                 <h3 className="mt-5 font-display text-xl font-semibold">Beneficios</h3>
                 <ul className="mt-4 space-y-2 text-sm text-brand-charcoal/65">{product.benefits.map((item) => <li key={item} className="flex gap-2"><span className="h-1.5 w-1.5 mt-2 rounded-full bg-brand-blue" />{item}</li>)}</ul>
               </div>
             </div>
           </Reveal>
           <Reveal delay={0.12} id="cotizar" className="scroll-mt-28 rounded-2xl border border-brand-line bg-brand-sand p-6 shadow-soft sm:p-8 lg:p-10">
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Solicitud</p>
-            <h3 className="mt-3 font-display text-3xl font-semibold leading-tight">Consulta esta referencia.</h3>
+            <h3 className="mt-3 font-display text-xl font-semibold leading-tight sm:text-2xl">Consulta esta referencia.</h3>
             <p className="mt-4 text-sm leading-6 text-brand-charcoal/65">Déjanos los datos de tu proyecto y te ayudaremos a identificar una alternativa coherente.</p>
             <div className="mt-8">
               <QuoteForm compact />

@@ -15,7 +15,7 @@ export default function ServicesSection() {
           description="De la primera conversación al seguimiento posterior."
         />
 
-        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-6 overflow-x-hidden">
+        <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 xl:grid-cols-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             const animation = reduceMotion
@@ -23,7 +23,7 @@ export default function ServicesSection() {
               : {
                   initial: { opacity: 0, y: 18 },
                   whileInView: { opacity: 1, y: 0 },
-                  viewport: { once: true, margin: '-60px' },
+                   viewport: { once: true, margin: '-80px' },
                   transition: { duration: 0.5, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] },
                 };
 

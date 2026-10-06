@@ -1,6 +1,7 @@
 import { ArrowRight, Home, Leaf, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SectionHeading from '../ui/SectionHeading';
 
 const items = [
   { icon: ShieldCheck, title: 'Tecnología' },
@@ -12,11 +13,10 @@ const items = [
 export default function WhyEnermove() {
   return (
     <section className="bg-brand-ink px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-page overflow-x-hidden">
+      <div className="mx-auto max-w-page">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Por qué ENERMOVE</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">La energía también debe sentirse simple.</h2>
+            <SectionHeading eyebrow="Por qué ENERMOVE" title="La energía también debe sentirse simple." />
             <Link to="/nosotros" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-brand-blue">
               Conoce nuestra visión
               <ArrowRight className="h-4 w-4 transition-transform hover:translate-x-1" />

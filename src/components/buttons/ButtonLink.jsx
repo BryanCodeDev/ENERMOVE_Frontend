@@ -7,6 +7,7 @@ export default function ButtonLink({ to, children, variant = 'primary', classNam
     secondary: 'border border-brand-blue/25 text-brand-blue hover:border-brand-blue hover:bg-brand-blue hover:text-white',
     dark: 'bg-brand-ink text-white hover:bg-brand-blue',
     outlineLight: 'border border-white/25 text-white hover:border-brand-blue hover:bg-brand-blue',
+    light: 'bg-white text-brand-blue shadow-soft hover:bg-brand-sand hover:text-brand-blueDark',
   };
 
   return (

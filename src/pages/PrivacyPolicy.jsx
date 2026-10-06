@@ -1,9 +1,10 @@
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import Reveal from '../components/ui/Reveal';
 import JsonLd from '../components/ui/JsonLd';
 import { useSeo, breadcrumbSchema } from '../utils/seo';
+import ButtonLink from '../components/buttons/ButtonLink';
 
 export default function PrivacyPolicy() {
   useSeo({
@@ -72,7 +73,7 @@ export default function PrivacyPolicy() {
               <ShieldCheck className="h-7 w-7 text-brand-blue" />
               <h2 className="mt-5 font-display text-2xl font-semibold">¿Tiene dudas sobre sus datos?</h2>
               <p className="mt-4 text-sm leading-7 text-brand-charcoal/65">Escríbanos a <a href="mailto:enermovesas@gmail.com" className="text-brand-blue underline">enermovesas@gmail.com</a> o contáctenos por WhatsApp.</p>
-              <Link to="/" className="mt-7 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white"><ArrowRight className="h-4 w-4" />Volver a ENERMOVE</Link>
+              <ButtonLink to="/" variant="primary">Volver a ENERMOVE</ButtonLink>
             </div>
           </Reveal>
         </div>

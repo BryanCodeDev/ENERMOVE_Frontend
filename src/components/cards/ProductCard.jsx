@@ -15,11 +15,11 @@ export default function ProductCard({ product, index = 0 }) {
           <div className="flex items-start justify-between gap-3 sm:gap-4">
             <div className="min-w-0">
               <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-blue sm:text-xs">{product.brand}</p>
-              <h3 className="mt-2 font-display text-lg font-semibold leading-tight sm:text-2xl">{product.name}</h3>
+              <h3 className="mt-2 font-display text-xl font-semibold leading-tight sm:text-2xl">{product.name}</h3>
             </div>
             <span className="shrink-0 rounded-lg bg-brand-sand px-2.5 py-1.5 font-display text-xs font-semibold text-brand-blue sm:px-3 sm:py-2 sm:text-sm">{product.power}</span>
           </div>
-          <p className="mt-3 text-[13px] leading-6 text-brand-charcoal/65 sm:mt-4 sm:text-sm">{product.description}</p>
+          <p className="mt-3 text-sm leading-6 text-brand-charcoal/65 sm:mt-4">{product.description}</p>
           <div className="mt-4 flex flex-wrap gap-2 sm:mt-5">
             {product.features.slice(0, 2).map((feature) => <span key={feature} className="rounded-full bg-brand-sand px-2.5 py-1 text-[10px] text-brand-charcoal/70 sm:px-3 sm:py-1.5 sm:text-[11px]">{feature}</span>)}
           </div>

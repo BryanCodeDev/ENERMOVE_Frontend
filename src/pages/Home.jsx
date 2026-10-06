@@ -23,7 +23,7 @@ export default function Home() {
       <JsonLd id="organization-schema" data={organizationSchema} />
       <JsonLd id="website-schema" data={webSiteSchema} />
       <JsonLd id="localbusiness-schema" data={localBusinessSchema} />
-      <div className="home-flow overflow-x-hidden">
+      <div className="home-flow">
         <Hero />
         <ValueProposition />
         <AboutPreview />

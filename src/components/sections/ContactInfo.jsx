@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import WhatsAppIcon from '../icons/WhatsAppIcon';
 import { contactConfig, getWhatsAppUrl } from '../../config/contact';
 import Reveal from '../ui/Reveal';
+import SectionHeading from '../ui/SectionHeading';
+import ButtonLink from '../buttons/ButtonLink';
 
 export default function ContactInfo() {
   const whatsappHref = getWhatsAppUrl();
@@ -18,8 +20,7 @@ export default function ContactInfo() {
       <div className="mx-auto max-w-page">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <Reveal>
-            <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Contacto</p>
-            <h2 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">Tu proyecto empieza con una conversación.</h2>
+            <SectionHeading eyebrow="Contacto" title="Tu proyecto empieza con una conversación." />
             <p className="mt-7 max-w-lg text-base leading-8 text-white/65">Comparte tu necesidad y construyamos una ruta clara para incorporar movilidad eléctrica y energía limpia.</p>
             <div className="mt-10 space-y-5">
               {items.map(([Icon, label, value, href]) => (
@@ -35,17 +36,14 @@ export default function ContactInfo() {
           </Reveal>
           <Reveal delay={0.12} className="rounded-2xl border border-white/10 bg-white p-8 text-brand-ink shadow-soft sm:p-10">
             <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Solicita una cotización</p>
-            <h3 className="mt-4 font-display text-3xl font-semibold leading-tight">Cuéntanos sobre tu necesidad.</h3>
+            <h3 className="mt-4 font-display text-xl font-semibold leading-tight sm:text-2xl">Cuéntanos sobre tu necesidad.</h3>
             <p className="mt-5 text-sm leading-7 text-brand-charcoal/65">Recibimos tu solicitud, analizamos tu proyecto y te respondemos por WhatsApp o correo en menos de 24 horas.</p>
             <ul className="mt-8 space-y-4">
               {['Diagnóstico inicial', 'Propuesta coherente', 'Acompañamiento cercano'].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-sm font-medium text-brand-charcoal/80"><Check className="h-4 w-4 text-brand-blue" />{item}</li>
               ))}
             </ul>
-            <Link to="/contacto" className="mt-9 inline-flex items-center gap-2 rounded-full bg-brand-blue px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark">
-              Cotizar ahora
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            <ButtonLink to="/contacto" variant="primary" className="mt-9">Cotizar ahora</ButtonLink>
           </Reveal>
         </div>
       </div>
