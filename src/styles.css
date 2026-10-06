@@ -251,13 +251,14 @@ img {
 
 @media (min-width: 640px) {
   .badge-float {
-    right: -2rem;
+    right: 0.75rem;
+    max-width: 12rem;
   }
 }
 
 @media (min-width: 1024px) {
   .badge-float {
-    right: -3rem;
+    right: 1rem;
     max-width: 14rem;
   }
 }

@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <motion.header
       style={{ y: navY }}
-      className={`fixed inset-x-0 top-0 z-50 w-full transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-soft backdrop-blur-xl' : 'bg-transparent'}`}
+      className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-soft backdrop-blur-xl' : 'bg-transparent'}`}
     >
       <div className="mx-auto flex h-16 w-full max-w-page items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-12">
         <Link to="/" className="group inline-flex items-center gap-2.5" aria-label="ENERMOVE inicio">
