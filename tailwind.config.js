@@ -32,7 +32,7 @@ export default {
         'input': '0.75rem',
       },
       maxWidth: {
-        page: '1200px',
+        page: 'min(1200px, 100%)',
       },
     },
   },

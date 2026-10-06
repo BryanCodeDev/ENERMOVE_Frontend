@@ -138,9 +138,8 @@ img {
   --type-lead: clamp(0.95rem, 0.9rem + 0.25vw, 1.125rem);
 }
 
-.page-shell section,
-.page-shell > div > section {
-  padding-inline: var(--shell-gutter);
+.page-shell {
+  overflow-x: clip;
 }
 
 .page-shell .max-w-page {

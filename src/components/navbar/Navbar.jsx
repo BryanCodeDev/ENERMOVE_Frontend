@@ -41,7 +41,7 @@ export default function Navbar() {
       style={{ y: navY }}
       className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-500 ${scrolled ? 'bg-white/90 shadow-soft backdrop-blur-xl' : 'bg-transparent'}`}
     >
-      <div className="mx-auto flex h-16 w-full max-w-page items-center justify-between px-5 sm:h-20 sm:px-8 lg:px-12">
+      <div className="flex h-16 w-full items-center justify-between px-5 sm:h-20 sm:px-8 lg:mx-auto lg:max-w-page lg:px-12">
         <Link to="/" className="group inline-flex items-center gap-2.5" aria-label="ENERMOVE inicio">
           <img src={logo} alt="ENERMOVE logo" className="h-9 w-9 shrink-0 rounded-xl object-cover shadow-lift transition-transform group-hover:scale-105 sm:h-10 sm:w-10" />
           <span className={`font-display text-base font-bold tracking-wide sm:text-lg sm:text-xl ${scrolled || open ? 'text-brand-ink' : headerTextClass}`}>ENERMOVE</span>
@@ -85,7 +85,7 @@ export default function Navbar() {
         transition={{ duration: 0.35, ease: 'easeInOut' }}
         className="w-full overflow-hidden bg-white/95 backdrop-blur-xl lg:hidden"
       >
-        <nav className="mx-auto w-full max-w-page px-5 pb-7 pt-2 sm:px-8" aria-label="Navegación móvil">
+        <nav className="w-full px-5 pb-7 pt-2 sm:px-8 lg:mx-auto lg:max-w-page" aria-label="Navegación móvil">
           <div className="flex flex-col divide-y divide-brand-line">
             {links.map((link, index) => (
               <NavLink

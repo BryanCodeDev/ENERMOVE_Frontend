@@ -29,7 +29,7 @@ export default function BusinessSection() {
             </div>
             <ButtonLink to="/contacto" variant="outlineLight" className="mt-8">Solicitar asesoría</ButtonLink>
           </motion.div>
-          <motion.div className="relative" initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
+          <motion.div className="relative overflow-x-clip" initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.7 }}>
             <div className="media-frame media-frame--portrait relative overflow-hidden rounded-[1.5rem] bg-brand-line sm:rounded-[2rem]">
               <img src={images.business} alt="" aria-hidden="true" className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/65 via-brand-ink/10 to-transparent" />

@@ -16,7 +16,7 @@ export default function ValueProposition() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </motion.div>
-          <div className="relative">
+          <div className="relative overflow-x-clip">
             <div className="absolute -left-6 -top-8 h-32 w-32 rounded-full bg-brand-blue/10 blur-2xl" />
              <div className="grid gap-4 sm:grid-cols-2">
               {company.principles.map((item, index) => (
