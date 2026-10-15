@@ -39,7 +39,7 @@ export default function Services() {
           <div className="mt-12 grid items-end justify-between gap-10 lg:grid-cols-[1fr_0.6fr]">
             <Reveal>
               <p className="font-display text-sm font-semibold uppercase tracking-[0.22em] text-brand-blue">Servicios</p>
-              <h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-tight text-brand-ink sm:text-6xl lg:text-7xl">Instalación de cargadores EV, energía solar y integración energética.</h1>
+              <h1 className="mt-5 max-w-4xl font-display text-5xl font-bold leading-[1.02] tracking-tight text-brand-ink sm:text-6xl lg:text-7xl">Instalación de cargadores EV, energía solar (e) integración</h1>
               <p className="mt-7 max-w-2xl text-base leading-8 text-brand-charcoal/65">Diseñamos una ruta clara: diagnosticamos tu necesidad, comparamos alternativas técnicas y definimos la solución óptima para tu proyecto de carga EV e integración solar.</p>
             </Reveal>
             <Reveal delay={0.12} className="rounded-2xl border border-brand-line bg-white p-7 shadow-soft">
