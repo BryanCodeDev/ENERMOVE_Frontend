@@ -17,7 +17,7 @@ export default function Catalog() {
   const title = activeCategory ? activeCategory.label : 'Catálogo informativo';
   const description = activeCategory ? activeCategory.description : 'Explora referencias informativas de carga rápida DC, carga normal AC y cargadores portátiles.';
 
-  const canonical = `https://enermove.netlify.app/catalogo${category ? `/${category}` : ''}`;
+  const canonical = `https://enermovesas.com/catalogo${category ? `/${category}` : ''}`;
   useSeo({
     title: `${title} | ENERMOVE`,
     description,
@@ -25,8 +25,8 @@ export default function Catalog() {
   });
 
   const breadcrumbItems = [
-    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
-    { name: 'Catálogo', url: 'https://enermove.netlify.app/catalogo' },
+    { name: 'Inicio', url: 'https://enermovesas.com/' },
+    { name: 'Catálogo', url: 'https://enermovesas.com/catalogo' },
   ];
   if (activeCategory) {
     breadcrumbItems.push({ name: activeCategory.label, url: canonical });
@@ -77,3 +77,4 @@ export default function Catalog() {
     </>
   );
 }
+

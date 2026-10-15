@@ -77,12 +77,12 @@ export default function Compatibilidad() {
   useSeo({
     title: 'Compatibilidad de cargadores por marca | ENERMOVE',
     description: 'Consulta qué cargador y conector necesita tu carro eléctrico o híbrido. Tesla, BYD, KIA, Nissan, BMW, Chery, Changan, Deepal, Renault, Volvo, Dongfeng, Mini Cooper. Tabla completa con conectores Tipo 1, Tipo 2, CCS2, GB/T, NACS, CHAdeMO.',
-    canonical: 'https://enermove.netlify.app/compatibilidad',
+    canonical: 'https://enermovesas.com/compatibilidad',
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
-    { name: 'Compatibilidad', url: 'https://enermove.netlify.app/compatibilidad' },
+    { name: 'Inicio', url: 'https://enermovesas.com/' },
+    { name: 'Compatibilidad', url: 'https://enermovesas.com/compatibilidad' },
   ]);
   const faqData = faqSchema(faqs);
 

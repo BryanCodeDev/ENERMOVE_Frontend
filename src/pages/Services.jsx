@@ -20,12 +20,12 @@ export default function Services() {
   useSeo({
     title: 'Instalación de cargadores y energía solar | ENERMOVE',
     description: 'Asesoría, selección de equipos, diseño e integración de carga EV con paneles solares. Instalación certificada RETIE en Colombia.',
-    canonical: 'https://enermove.netlify.app/servicios',
+    canonical: 'https://enermovesas.com/servicios',
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
-    { name: 'Servicios', url: 'https://enermove.netlify.app/servicios' },
+    { name: 'Inicio', url: 'https://enermovesas.com/' },
+    { name: 'Servicios', url: 'https://enermovesas.com/servicios' },
   ]);
   const serviceSchemas = services.map(serviceSchema);
 
@@ -56,3 +56,4 @@ export default function Services() {
     </>
   );
 }
+

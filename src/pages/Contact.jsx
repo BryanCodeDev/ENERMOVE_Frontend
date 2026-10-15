@@ -29,12 +29,12 @@ export default function Contact() {
   useSeo({
     title: 'Cotiza tu cargador de carro eléctrico | ENERMOVE',
     description: 'Cuéntanos tu proyecto y te respondemos por WhatsApp, correo o teléfono. Instalación certificada RETIE en Bogotá y Colombia.',
-    canonical: 'https://enermove.netlify.app/contacto',
+    canonical: 'https://enermovesas.com/contacto',
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
-    { name: 'Contacto', url: 'https://enermove.netlify.app/contacto' },
+    { name: 'Inicio', url: 'https://enermovesas.com/' },
+    { name: 'Contacto', url: 'https://enermovesas.com/contacto' },
   ]);
   const faqData = faqSchema(faqs);
 
@@ -58,3 +58,4 @@ export default function Contact() {
     </>
   );
 }
+

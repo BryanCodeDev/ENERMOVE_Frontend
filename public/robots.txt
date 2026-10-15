@@ -3,14 +3,13 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://enermove.netlify.app/sitemap.xml
+Sitemap: https://enermovesas.com/sitemap.xml
 
 # Disallow admin/private paths
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /*.json$
-Disallow: /*.xml$
 Disallow: /checkout/
 Disallow: /carrito/
 Disallow: /login/
@@ -21,4 +20,4 @@ Disallow: /cuenta/
 Crawl-delay: 10
 
 # Host
-Host: https://enermove.netlify.app
+Host: https://enermovesas.com

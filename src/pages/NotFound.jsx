@@ -15,8 +15,8 @@ export default function NotFound() {
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
-    { name: 'Página no encontrada', url: 'https://enermove.netlify.app/404' },
+    { name: 'Inicio', url: 'https://enermovesas.com/' },
+    { name: 'Página no encontrada', url: 'https://enermovesas.com/404' },
   ]);
 
   return (
@@ -29,3 +29,4 @@ export default function NotFound() {
     </>
   );
 }
+

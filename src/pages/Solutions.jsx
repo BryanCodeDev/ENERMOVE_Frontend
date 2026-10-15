@@ -12,12 +12,12 @@ export default function Solutions() {
   useSeo({
     title: 'Soluciones de carga EV y energía solar | ENERMOVE',
     description: 'Conoce nuestras soluciones en carga residencial, empresarial, infraestructura EV y energía solar para hogares y empresas en Colombia.',
-    canonical: 'https://enermove.netlify.app/soluciones',
+    canonical: 'https://enermovesas.com/soluciones',
   });
 
   const breadcrumbData = breadcrumbSchema([
-    { name: 'Inicio', url: 'https://enermove.netlify.app/' },
-    { name: 'Soluciones', url: 'https://enermove.netlify.app/soluciones' },
+    { name: 'Inicio', url: 'https://enermovesas.com/' },
+    { name: 'Soluciones', url: 'https://enermovesas.com/soluciones' },
   ]);
   const solutionSchemas = solutions.map(solutionSchema);
 
@@ -54,3 +54,4 @@ export default function Solutions() {
     </>
   );
 }
+
