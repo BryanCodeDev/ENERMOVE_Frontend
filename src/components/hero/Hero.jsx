@@ -1,5 +1,4 @@
 import { ArrowDown, Bolt, Home, Leaf } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { images } from '../../data/images';
 import ButtonLink from '../buttons/ButtonLink';
@@ -12,23 +11,33 @@ export default function Hero() {
   return (
     <section className="home-hero relative flex min-h-[88svh] sm:min-h-[90svh] items-end overflow-hidden bg-brand-ink text-white">
       <motion.div style={{ y: imageY }} className="absolute inset-0">
-        <img src={images.hero} alt={images.heroAlt} className="h-full w-full object-cover" fetchpriority="high" />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-ink via-brand-ink/70 to-brand-ink/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-ink via-transparent to-brand-ink/35" />
+        <img
+          src={images.hero}
+          alt={images.heroAlt}
+          className="h-full w-full object-cover object-[68%_center] sm:object-center"
+          fetchpriority="high"
+        />
+        {/* Mobile: oscurece de abajo hacia arriba para que el texto centrado se lea */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/80 to-brand-ink/25 sm:bg-gradient-to-r sm:from-brand-ink sm:via-brand-ink/70 sm:to-brand-ink/20" />
+        <div className="absolute inset-0 hidden bg-gradient-to-t from-brand-ink via-transparent to-brand-ink/35 sm:block" />
       </motion.div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px] [mask-image:linear-gradient(to_bottom,transparent,black)]" />
-      <div className="relative mx-auto flex w-full max-w-page flex-col px-[clamp(1rem,4vw,3rem)] pb-10 pt-28 sm:pb-14 sm:pt-32 lg:pt-40">
-        <motion.div style={{ y: contentY }} className="max-w-4xl">
+
+      <div className="relative mx-auto flex w-full max-w-page flex-col px-5 pb-10 pt-28 sm:px-[clamp(1rem,4vw,3rem)] sm:pb-14 sm:pt-32 lg:pt-40">
+        <motion.div
+          style={{ y: contentY }}
+          className="mx-auto max-w-4xl text-center sm:mx-0 sm:text-left"
+        >
           <motion.h1
-            className="font-display text-4xl font-bold leading-[0.98] tracking-tight sm:text-5xl lg:text-[5.4rem]"
+            className="font-display text-[2.5rem] font-bold leading-[1.02] tracking-tight [text-wrap:balance] sm:text-5xl lg:text-[5.4rem]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
           >
-            Energía que <span className="text-brand-blue">conecta</span> tu hogar
+            Energía que <span className="text-sky-400 sm:text-brand-blue">conecta</span> tu hogar
           </motion.h1>
           <motion.p
-            className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg"
+            className="mx-auto mt-5 max-w-md text-base leading-7 text-white/80 sm:mx-0 sm:max-w-2xl sm:text-lg sm:text-white/75"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
@@ -36,31 +45,34 @@ export default function Hero() {
             Movilidad eléctrica y energía limpia para hogares y empresas.
           </motion.p>
           <motion.div
-            className="mt-8"
+            className="mt-8 flex justify-center sm:justify-start"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.46, ease: [0.22, 1, 0.36, 1] }}
           >
-             <ButtonLink to="/soluciones" variant="primary" className="w-full sm:w-auto sm:justify-start">Conoce nuestras soluciones</ButtonLink>
+            <ButtonLink to="/soluciones" variant="primary" className="w-full max-w-sm sm:w-auto sm:max-w-none sm:justify-start">
+              Conoce nuestras soluciones
+            </ButtonLink>
           </motion.div>
         </motion.div>
+
         <motion.div
-          className="mt-10 flex flex-wrap items-center justify-between gap-x-8 gap-y-6 border-t border-white/15 pt-5"
+          className="mt-10 flex flex-col items-center gap-6 border-t border-white/15 pt-5 sm:flex-row sm:flex-wrap sm:justify-between sm:gap-x-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          <div className="flex flex-wrap gap-x-6 gap-y-4 sm:gap-x-9">
+          <div className="grid w-full grid-cols-3 gap-2 sm:flex sm:w-auto sm:gap-x-9">
             {[
               [Bolt, 'EV', 'Carga inteligente'],
               [Home, 'HOME', 'Soluciones residenciales'],
               [Leaf, 'SOLAR', 'Energía limpia'],
             ].map(([Icon, label, text]) => (
-              <div key={label} className="flex items-center gap-2.5">
-                <Icon className="h-4 w-4 shrink-0 text-brand-blue" />
+              <div key={label} className="flex flex-col items-center gap-1.5 text-center sm:flex-row sm:gap-2.5 sm:text-left">
+                <Icon className="h-4 w-4 shrink-0 text-sky-400 sm:text-brand-blue" />
                 <div>
                   <p className="font-display text-[10px] font-bold tracking-[0.16em] sm:text-xs">{label}</p>
-                  <p className="mt-0.5 text-[10px] text-white/55 sm:text-[11px]">{text}</p>
+                  <p className="mt-0.5 text-[10px] leading-tight text-white/60 sm:text-[11px] sm:text-white/55">{text}</p>
                 </div>
               </div>
             ))}
