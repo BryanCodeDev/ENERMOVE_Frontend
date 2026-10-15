@@ -62,10 +62,17 @@ export default function Navbar() {
               )}
             </NavLink>
           ))}
-          <Link to="/contacto" className="ml-1 inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-blue px-4 py-2.5 text-xs font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:px-5 sm:text-sm">
-            Solicitar cotización
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          {pathname === '/' ? (
+            <a href="#contacto" className="ml-1 inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-blue px-4 py-2.5 text-xs font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:px-5 sm:text-sm">
+              Solicitar cotización
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          ) : (
+            <Link to="/contacto" className="ml-1 inline-flex shrink-0 items-center gap-2 rounded-full bg-brand-blue px-4 py-2.5 text-xs font-semibold text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-brand-blueDark sm:px-5 sm:text-sm">
+              Solicitar cotización
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          )}
         </nav>
 
         <button
@@ -98,10 +105,17 @@ export default function Navbar() {
               </NavLink>
             ))}
           </div>
-          <Link to="/contacto" className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-5 py-3.5 text-sm font-semibold text-white shadow-lift" >
-            Solicitar cotización
-            <ArrowRight className="h-4 w-4" />
-          </Link>
+          {pathname === '/' ? (
+            <a href="#contacto" className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-5 py-3.5 text-sm font-semibold text-white shadow-lift">
+              Solicitar cotización
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          ) : (
+            <Link to="/contacto" className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-brand-blue px-5 py-3.5 text-sm font-semibold text-white shadow-lift">
+              Solicitar cotización
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          )}
         </nav>
       </motion.div>
     </motion.header>
