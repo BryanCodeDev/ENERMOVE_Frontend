@@ -8,3 +8,63 @@
   to = "/sitemap.xml"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.ico"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/logo.png"
+  to = "/logo.png"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/logo.webp"
+  to = "/logo.webp"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/og-image.webp"
+  to = "/og-image.webp"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/favicon.svg"
+  to = "/favicon.svg"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/apple-touch-icon.png"
+  to = "/apple-touch-icon.png"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/icon-192.png"
+  to = "/icon-192.png"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/icon-512.png"
+  to = "/icon-512.png"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
