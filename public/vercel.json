@@ -16,7 +16,7 @@
     { "source": "/logo.png", "destination": "/logo.png" },
     { "source": "/logo.webp", "destination": "/logo.webp" },
     { "source": "/og-image.webp", "destination": "/og-image.webp" },
-    { "source": "/favicon.svg", "destination": "/favicon.svg" },
+    { "source": "/favicon.ico", "destination": "/favicon.ico" },
     { "source": "/apple-touch-icon.png", "destination": "/apple-touch-icon.png" },
     { "source": "/icon-192.png", "destination": "/icon-192.png" },
     { "source": "/icon-512.png", "destination": "/icon-512.png" },
