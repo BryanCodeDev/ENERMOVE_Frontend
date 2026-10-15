@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <div className="flex h-16 w-full items-center justify-between px-5 sm:h-20 sm:px-8 lg:mx-auto lg:max-w-page lg:px-12">
         <Link to="/" className="group inline-flex items-center gap-2.5" aria-label="ENERMOVE inicio">
-          <img src={logo} alt="ENERMOVE logo" className="h-9 w-9 shrink-0 rounded-xl object-cover shadow-lift transition-transform group-hover:scale-105 sm:h-10 sm:w-10" />
+          <img src={logo} alt="ENERMOVE logo" className="h-9 w-9 shrink-0 rounded-xl object-contain shadow-lift transition-transform group-hover:scale-105 sm:h-10 sm:w-10" />
           <span className={`font-display text-base font-bold tracking-wide sm:text-lg sm:text-xl ${scrolled || open ? 'text-brand-ink' : headerTextClass}`}>ENERMOVE</span>
         </Link>
 
