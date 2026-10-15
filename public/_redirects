@@ -1,0 +1,2 @@
+# Netlify / static hosts: serve sitemap.xml as static file, not SPA fallback
+/sitemap.xml  /sitemap.xml  200
