@@ -20,7 +20,7 @@ export const seoDefaults = {
   title: 'ENERMOVE | Energía que conecta tu hogar',
   description: 'ENERMOVE integra soluciones de movilidad eléctrica y energía limpia para hogares y empresas en Colombia.',
   canonical: siteUrl,
-  image: '/enermove-og.jpg',
+  image: '/favicon.ico',
 };
 
 export function useSeo({ title, description, canonical, image, type = 'website', noIndex = false, noFollow = false }) {
