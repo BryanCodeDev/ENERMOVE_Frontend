@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
     title: 'Política de privacidad | ENERMOVE',
     description: 'Política de privacidad y protección de datos personales de ENERMOVE S.A.S. conforme a la Ley 1581 de 2012 y Decreto 1377 de 2013.',
     canonical: 'https://enermovesas.com/politica-de-privacidad',
-    noIndex: true,
+    noIndex: false,
   });
 
   const breadcrumbData = breadcrumbSchema([

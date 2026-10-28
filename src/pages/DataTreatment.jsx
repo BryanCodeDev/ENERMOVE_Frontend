@@ -11,7 +11,7 @@ export default function DataTreatment() {
     title: 'Tratamiento de datos personales | ENERMOVE',
     description: 'Procedimientos y políticas para el tratamiento de datos personales en ENERMOVE S.A.S. conforme a la Ley 1581 de 2012 y Decreto 1377 de 2013.',
     canonical: 'https://enermovesas.com/tratamiento-de-datos',
-    noIndex: true,
+    noIndex: false,
   });
 
   const breadcrumbData = breadcrumbSchema([
