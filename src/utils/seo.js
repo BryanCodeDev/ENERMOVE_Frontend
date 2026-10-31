@@ -58,7 +58,7 @@ export const organizationSchema = {
   '@type': 'Organization',
   name: 'ENERMOVE',
   url: siteUrl,
-  logo: `${siteUrl}/logo.svg`,
+  logo: `${siteUrl}/logo.webp`,
   description: seoDefaults.description,
   areaServed: { '@type': 'Country', name: 'Colombia' },
   sameAs: [
@@ -94,7 +94,7 @@ export const localBusinessSchema = {
   '@type': 'LocalBusiness',
   name: 'ENERMOVE',
   url: siteUrl,
-  logo: `${siteUrl}/logo.svg`,
+  logo: `${siteUrl}/logo.webp`,
   description: seoDefaults.description,
   areaServed: { '@type': 'Country', name: 'Colombia' },
   address: {
@@ -182,7 +182,7 @@ export const articleSchema = (post) => ({
   datePublished: post.date,
   dateModified: post.date,
   author: { '@type': 'Organization', name: 'ENERMOVE' },
-  publisher: { '@type': 'Organization', name: 'ENERMOVE', logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.svg` } },
+  publisher: { '@type': 'Organization', name: 'ENERMOVE', logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.webp` } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': post.url },
 });
 

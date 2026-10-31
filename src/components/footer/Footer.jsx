@@ -2,7 +2,7 @@ import { ArrowUpRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from
 import { Link } from 'react-router-dom';
 import WhatsAppIcon from '../icons/WhatsAppIcon';
 import { contactConfig, getWhatsAppUrl } from '../../config/contact';
-import logo from '../../assets/images/logo.webp';
+const logo = '/logo.webp';
 
 const navigation = [
   { label: 'Inicio', to: '/' },
